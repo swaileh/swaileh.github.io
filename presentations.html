@@ -7,36 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Inline CSS for mask and section highlight */
+        /* Inline CSS for smooth scrolling */
         html {
             scroll-behavior: smooth;
-        }
-        .mask {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            pointer-events: none;
-            z-index: 999;
-        }
-        .highlight-section {
-            position: relative;
-            z-index: 1000;
-        }
-        .highlight-section::before {
-            content: "";
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            right: -15px;
-            bottom: -15px;
-            background: yellow;
-            opacity: 0.5;
-            pointer-events: none;
-            z-index: 998;
-            border-radius: 10px;
         }
     </style>
 </head>
@@ -209,7 +182,7 @@
             </ul>
         </div>
 
-        <div id='presentations' class="highlight-section">
+        <div id='presentations'>
             <h3>Presentations in National or International Conferences</h3>
             <ul>
                 <li>
@@ -270,54 +243,43 @@
                     <strong>2020: </strong>
                     <span>Y. Qian, X. Zhang, B. Wang, W. Li, Z. Gu, H. Wang, W. Swaileh,
                         <strong><a href="https://arxiv.org/abs/2007.15836" target="_blank">"TEAM: We Need More Powerful Adversarial Examples for DNNs"</a></strong>, <arxiv:2007.15836>.
-                        </span>
-                    </li>
-                    <li>
-                        <strong>2020: </strong>
-                        <span>Y. Qian, X. Zhang, W. Swaileh, L. Wei, B. Wang, J. Chen, W. Zhou, J. Lei,
-                            <strong><a href="https://arxiv.org/abs/2001.08389" target="_blank">"TEAM: An Taylor Expansion-Based Method for Generating Adversarial Examples"</a></strong>, <arxiv:2001.08389></arxiv:2001.08389>.
-                        </span>
-                    </li>
-                    <li>
-                        <strong>2008: </strong>
-                        <span>W. Swaileh, S. Nicolas, C. Petitjean,
-                            <strong><a href="https://www.researchgate.net/publication/286919960_An_Evidential_Markov_Random_Fields_Model_For_Cardiac_MR_Image_Segmentation" target="_blank">"An Evidential Markov Random Fields Model For Cardiac MR Image Segmentation"</a></strong>, Scholar press (67 pages) ISBN:9783639862287.
-                        </span>
-                    </li>
-                </ul>
-            </div>
-    
-            <div id='tutorials'>
-                <h3>Tutorials</h3>
-                <ul>
-                    <li>
-                        <strong>2018: </strong>
-                        <span>W. Swaileh, T. Paquet,
-                            <strong><a href="https://doi.org/10.13140/RG.2.2.23442.50880" target="_blank">"Introduction to the Kaldi/WFST Toolkit"</a></strong>, ResearchGate Methods, DOI: 10.13140/RG.2.2.23442.50880.
-                        </span>
-                    </li>
-                </ul>
-            </div>
+                    </span>
+                </li>
+                <li>
+                    <strong>2020: </strong>
+                    <span>Y. Qian, X. Zhang, W. Swaileh, L. Wei, B. Wang, J. Chen, W. Zhou, J. Lei,
+                        <strong><a href="https://arxiv.org/abs/2001.08389" target="_blank">"TEAM: An Taylor Expansion-Based Method for Generating Adversarial Examples"</a></strong>, <arxiv:2001.08389></arxiv:2001.08389>.
+                    </span>
+                </li>
+                <li>
+                    <strong>2008: </strong>
+                    <span>W. Swaileh, S. Nicolas, C. Petitjean,
+                        <strong><a href="https://www.researchgate.net/publication/286919960_An_Evidential_Markov_Random_Fields_Model_For_Cardiac_MR_Image_Segmentation" target="_blank">"An Evidential Markov Random Fields Model For Cardiac MR Image Segmentation"</a></strong>, Scholar press (67 pages) ISBN:9783639862287.
+                    </span>
+                </li>
+            </ul>
         </div>
-    
-        <!-- JavaScript to handle scrolling and mask -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Scroll to the presentations section
-                const presentationsSection = document.getElementById('presentations');
-                presentationsSection.scrollIntoView({ behavior: 'smooth' });
-    
-                // Apply the mask
-                const mask = document.createElement('div');
-                mask.classList.add('mask');
-                document.body.appendChild(mask);
-            });
-    
-            function scrollToSection(sectionId) {
-                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-            }
-        </script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    </body>
-    </html>
+
+        <div id='tutorials'>
+            <h3>Tutorials</h3>
+            <ul>
+                <li>
+                    <strong>2018: </strong>
+                    <span>W. Swaileh, T. Paquet,
+                        <strong><a href="https://doi.org/10.13140/RG.2.2.23442.50880" target="_blank">"Introduction to the Kaldi/WFST Toolkit"</a></strong>, ResearchGate Methods, DOI: 10.13140/RG.2.2.23442.50880.
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle scrolling -->
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -6,6 +6,39 @@
     <title>Publications in International Journals - Wassim Swaileh</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline CSS for mask and section highlight */
+        html {
+            scroll-behavior: smooth;
+        }
+        .mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            pointer-events: none;
+            z-index: 999;
+        }
+        .highlight-section {
+            position: relative;
+            z-index: 1000;
+        }
+        .highlight-section::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            background: yellowgreen;
+            opacity: 0.5;
+            pointer-events: none;
+            z-index: 998;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <?php include 'navbar.php'; ?>
@@ -29,6 +62,56 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
                         <ul class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                            <style>
+                                /* Inline CSS for mask and section highlight */
+                                html {
+                                    scroll-behavior: smooth;
+                                }
+                                .mask {
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: rgba(255, 255, 255, 0.5);
+                                    pointer-events: none;
+                                    z-index: 999;
+                                }
+                                .highlight-section {
+                                    position: relative;
+                                    z-index: 1000;
+                                }
+                                .highlight-section::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: -15px;
+                                    left: -15px;
+                                    right: -15px;
+                                    bottom: -15px;
+                                    background: yellowgreen;
+                                    opacity: 0.5;
+                                    pointer-events: none;
+                                    z-index: 998;
+                                    border-radius: 10px;
+                                }
+                            </style>
+                            <!-- JavaScript to handle scrolling and mask -->
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    // Scroll to the presentations section
+                                    const presentationsSection = document.getElementById('phd-thesis');
+                                    presentationsSection.scrollIntoView({ behavior: 'smooth' });
+                        
+                                    // Apply the mask
+                                    const mask = document.createElement('div');
+                                    mask.classList.add('mask');
+                                    document.body.appendChild(mask);
+                                });
+                        
+                                function scrollToSection(sectionId) {
+                                    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+                                }
+                            </script>
                             <li><a class="dropdown-item" onclick="scrollToSection('publications-journals')">Publications in International Journals</a></li>
                             <li><a class="dropdown-item" onclick="scrollToSection('publications-conferences')">Publications in International Conference Proceedings</a></li>
                             <li><a class="dropdown-item" onclick="scrollToSection('publications-national')">Publications in National Journals</a></li>
@@ -53,219 +136,240 @@
     </nav>
     
     <div class="container mt-4">
-        
         <h2>Publications</h2>
-            <div id='publications-journals'>
-                <h3>Publications in International Journals</h3>
-                <ul>
-                    <li>
-                        <strong>2023: </strong> 
-                        <span>W. Swaileh, F. Imbert, Y. Soullard, R. Tavenard, E. Anquetil, 
-                            <strong><a href="https://hal.univ-reunion.fr/IRISA_UBS/hal-04076399v2" target="_blank">"Online handwriting trajectory reconstruction from kinematic sensors using temporal convolutional network"</a></strong>, International Journal on Document Analysis and Recognition (IJDAR).
-                        </span>
-                        <li>
-                            <strong>2023: </strong>
-                            <span>X. Liang, Y. Qian, J. Huang, X. Ling, B. Wang, C. Wu, W. Swaileh, 
-                                <strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167865523002076" target="_blank">"Towards desirable decision boundary by Moderate-Margin Adversarial Training"</a></strong>, Pattern Recognition Letters.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2023: </strong> 
-                            <span>J. Mansouri, F. Cavarretta, W. Swaileh, D. Kotzinos, 
-                                <strong><a href="https://ieeexplore.ieee.org/document/10363172" target="_blank">"Extracting Unique Discussions of Interests for Entrepreneurs and Managers in a Set of Business Tweets Without Any Human Bias"</a></strong>, IEEE Access 11: 144258-144273.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2023: </strong> 
-                            <span>Y. Quan, Z. He, Y. Wang, B. Wang, X. Ling, W. Gu, H. Wang, S. Zeng, W. Swaileh, 
-                                <strong><a href="https://ieeexplore.ieee.org/document/10103912" target="_blank">"Hierarchical Threshold Pruning Based on Uniform Response Criterion"</a></strong>, Computers & Security journal.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2022: </strong> 
-                            <span>Y. Quan, J. Wang, H. Wang, Z. Gu, B. Wang, S. Zeng, W. Swaileh, 
-                                <strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167404822003352" target="_blank">"3-Visually imperceptible adversarial patch attacks"</a></strong>, Computers & Security journal.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2022: </strong>
-                            <span>A. Pitti, M. Quoy, C. Lavandier, S. Boucenna, W. Swaileh, C. Weidmann, 
-                                <strong><a href="https://ieeexplore.ieee.org/document/9762837" target="_blank">"In search of a neural model for serial order: A brain theory for memory development and higher level cognition"</a></strong>, IEEE Transactions on Cognitive and Developmental Systems.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2018: </strong>
-                            <span>W. Swaileh, Y. Soullard, T. Paquet, 
-                                <strong><a href="https://doi.org/10.1016/j.patrec.2018.07.027" target="_blank">"A Unified Multilingual Handwriting Recognition System using multigrams sub-lexical units"</a></strong>, Pattern Recognition Letters 121, 68-76.
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div id='publications-conferences'>
-                    <h3>Publications in International Conference Proceedings</h3>
-                    <ul>
-                        <li>
-                            <strong>2022: </strong>
-                            <span>W. Swaileh, M. Jordan, D. Kotzinos, 
-                                <strong><a href="https://link.springer.com/chapter/10.1007/978-3-031-06555-2_42" target="_blank">"3D Modeling Approach for Ancient Floor Plans’ Quick Browsing"</a></strong>, The 15th International Workshop on Document Analysis Systems (DAS 2022).
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2021: </strong>
-                            <span>W. Swaileh, D. Kotzinos, S. Ghosh, M. Jordan, S. Vu, Y. Qian, 
-                                <strong><a href="https://link.springer.com/chapter/10.1007/978-3-030-86549-8_3" target="_blank">"Versailles-FP dataset: Wall Detection in Ancient Floor Plans"</a></strong>, 16th International Conference on Document Analysis and Recognition (ICDAR 2021), Springer, Cham, 2021. p. 34-49.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2020: </strong>
-                            <span>W. Swaileh, T. Paquet, S. Adam, A. Rojas-Camacho, 
-                                <strong><a href="https://link.springer.com/chapter/10.1007/978-3-030-57058-3_23" target="_blank">"A Named Entity Extraction System for Historical Financial Data"</a></strong>, The 14th International Workshop on Document Analysis Systems (DAS 2020), Springer, Cham, 2020. p. 324-340.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2019: </strong>
-                            <span>Y. Soullard, W. Swaileh, C. Chatelain, P. Tranouez, T. Paquet, 
-                                <strong><a href="https://ieeexplore.ieee.org/document/8978128" target="_blank">"Improving text recognition using optical and language model writer adaptation"</a></strong>, The 15th IAPR International Conference on Document Analysis and Recognition (ICDAR 2019).
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2017: </strong>
-                            <span>W. Swaileh, T. Paquet, Y. Soullard, P. Tranouez, 
-                                <strong><a href="https://doi.org/10.1109/ICDAR.2017.31" target="_blank">"Handwriting Recognition with Multigrams"</a></strong>, 14th IAPR International Conference on Document Analysis and Recognition (ICDAR 2017).
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2016: </strong>
-                            <span>W. Swaileh, J. Lerouge, T. Paquet, 
-                                <strong><a href="https://doi.org/10.1109/ICFHR.2016.0104" target="_blank">"A unified French/English syllabic model for handwriting recognition"</a></strong>, 15th International Conference on Frontiers in Handwriting Recognition (ICFHR 2016).
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div id='publications-national'>
-                    <h3>Publications in National Journals</h3>
-                    <ul>
-                        <li>
-                            <strong>2023: </strong>
-                            <span>M. Jordan, D. Desbourdes, N. Priniotakis, W. Swaileh, B. Ringot, 
-                                <strong><a href="https://journals.openedition.org/revuehn/3444" target="_blank">"Verspera, du plan d’époque à la visite virtuelle : une fructueuse collaboration interdisciplinaire"</a></strong>, Humanités numériques.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2016: </strong>
-                            <span>W. Swaileh, T. Paquet, 
-                                <strong><a href="https://ieeexplore.ieee.org/document/7814120" target="_blank">"A syllabic model for French and English for handwriting recognition"</a></strong>, Document numérique 19 (2), 117-134.
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div id='phd-thesis'>
-                    <h3>PhD Thesis</h3>
-                    <ul>
-                        <li>
-                            <strong>2017: </strong>
-                            <span>W. Swaileh, 
-                                <strong><a href="https://theses.hal.science/tel-01781268" target="_blank">"Language Modelling for Handwriting Recognition"</a></strong>, 2017. PhD Thesis. University of Rouen Normandy.
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div id='presentations'>
-                    <h3>Presentations in National or International Conferences</h3>
-                    <ul>
-                        <li>
-                            <strong>2022: </strong>
-                            <span>J. Mansouri, F. Cavarretta, W. Swaileh, D. Kotzinos, 
-                                <strong><a href="https://hal.science/hal-03895960/" target="_blank">"Toward Deep neural network for pen trajectory reconstruction from kinematic sensors"</a></strong>,Symposium International Francophone sur l’Ecrit et le Document (SIFED'2022).
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2021: </strong>
-                            <span>J. Mansouri, F. Cavarretta, W. Swaileh, D. Kotzinos, 
-                                <strong><a href="https://faculty.essec.edu/en/research/completely-unsupervised-opinion-mining-in-online-professional-groups-discussions/" target="_blank">"Completely Unsupervised Opinion Mining in Professional Groups’ Discussions"</a></strong>, OpLaDyn Satellite of Networks 2021.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2016: </strong>
-                            <span>W. Swaileh, K. Ait Mohand, T. Paquet, 
-                                <strong><a href="https://ieeexplore.ieee.org/document/7814120" target="_blank">"A syllabic model for handwriting recognition"</a></strong>, Proceedings of the CORIA-CIFED conference, Toulouse, pp. 23-37, 2016.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2015: </strong>
-                            <span>W. Swaileh, K. Ait Mohand, T. Paquet, 
-                                <strong><a href="https://ieeexplore.ieee.org/document/7333962" target="_blank">"Multi-script Iterative Steerable Directional Filtering for Handwritten Text Line Extraction"</a></strong>, 5th International Workshop on Multilingual OCR at ICDAR 2015.
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div id='submitted-articles'>
-                    <h3>Submitted or Archived Articles</h3>
-                    <ul>
-                        <li>
-                            <strong>2024: </strong>
-                            <span>A. Diko, Y. Patras, T. Wang, W. Swaileh, S. Remes, 
-                                <strong><a href="#" target="_blank">"Memory-Based Vision-Language Model for VQA and Captioning"</a></strong>, Computer Vision and Pattern Recognition Conference (CVPR 2025) [in submission].
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2022: </strong>
-                            <span>Y. Qian, Y. Wang, B. Wang, Z. Gu, Y. Guo, W. Swaileh, 
-                                <strong><a href="https://arxiv.org/abs/2207.01396" target="_blank">"Hessian-Free Second-Order Adversarial Examples for Adversarial Learning"</a></strong>, <arxiv:2022 class="01396"></arxiv:2022>.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2021: </strong>
-                            <span>Y. Qian, Q. Shao, T. Yao, B. Wang, S. Ji, S. Zeng, Z. Gu, W. Swaileh, 
-                                <strong><a href="https://arxiv.org/abs/2102.00662" target="_blank">"Towards Speeding up Adversarial Training in Latent Spaces"</a></strong>, <arxiv:2021 class="00662"></arxiv:2021>.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2020: </strong>
-                            <span>S. Adam, S. Bouvier, B. Coüasnon, C. Guerry, A. Lemaitre, I. Le Floch, T. Paquet, A. Camacho, A. Fedioun, W. Swaileh, 
-                                <strong><a href="https://hal.science/hal-03828225/document" target="_blank">"EurHisFirm M7.1: First version of the data extraction system"</a></strong>, HAL.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2020: </strong>
-                            <span>Y. Qian, X. Zhang, B. Wang, W. Li, Z. Gu, H. Wang, W. Swaileh, 
-                                <strong><a href="https://arxiv.org/abs/2007.15836" target="_blank">"TEAM: We Need More Powerful Adversarial Examples for DNNs"</a></strong>, <arxiv:2001 class="08389"></arxiv:2001>.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2020: </strong>
-                            <span>Y. Qian, X. Zhang, W. Swaileh, L. Wei, B. Wang, J. Chen, W. Zhou, J. Lei, 
-                                <strong><a href="https://arxiv.org/abs/2001.08389" target="_blank">"TEAM: An Taylor Expansion-Based Method for Generating Adversarial Examples"</a></strong>, <arxiv:2001 class="08389"></arxiv:2001>.
-                            </span>
-                        </li>
-                        <li>
-                            <strong>2008: </strong>
-                            <span>W. Swaileh, S. Nicolas, C. Petitjean, 
-                                <strong><a href="https://www.researchgate.net/publication/286919960_An_Evidential_Markov_Random_Fields_Model_For_Cardiac_MR_Image_Segmentation" target="_blank">"An Evidential Markov Random Fields Model For Cardiac MR Image Segmentation"</a></strong>, Scholar press (67 pages) ISBN:9783639862287.
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div id='tutorials'>
-                    <h3>Tutorials</h3>
-                    <ul>
-                        <li>
-                            <strong>2018: </strong>
-                            <span>W. Swaileh, T. Paquet, 
-                                <strong><a href="https://doi.org/10.13140/RG.2.2.23442.50880" target="_blank">"Introduction to the Kaldi/WFST Toolkit"</a></strong>, ResearchGate Methods, DOI: 10.13140/RG.2.2.23442.50880.
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            
+        <!-- other sections -->
+
+        <div id="publications-journals"></div>
+            <h3>Publications in International Journals</h3>
+            <ul>
+                <li>
+                    <strong>2023: </strong>
+                    <span>W. Swaileh, F. Imbert, Y. Soullard, R. Tavenard, E. Anquetil,
+                        <strong><a href="https://hal.univ-reunion.fr/IRISA_UBS/hal-04076399v2" target="_blank">"Online handwriting trajectory reconstruction from kinematic sensors using temporal convolutional network"</a></strong>, International Journal on Document Analysis and Recognition (IJDAR).
+                    </span>
+                <li>
+                    <strong>2023: </strong>
+                    <span>X. Liang, Y. Qian, J. Huang, X. Ling, B. Wang, C. Wu, W. Swaileh,
+                        <strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167865523002076" target="_blank">"Towards desirable decision boundary by Moderate-Margin Adversarial Training"</a></strong>, Pattern Recognition Letters.
+                    </span>
+                </li>
+                <li>
+                    <strong>2023: </strong>
+                    <span>J. Mansouri, F. Cavarretta, W. Swaileh, D. Kotzinos,
+                        <strong><a href="https://ieeexplore.ieee.org/document/10363172" target="_blank">"Extracting Unique Discussions of Interests for Entrepreneurs and Managers in a Set of Business Tweets Without Any Human Bias"</a></strong>, IEEE Access 11: 144258-144273.
+                    </span>
+                </li>
+                <li>
+                    <strong>2023: </strong>
+                    <span>Y. Quan, Z. He, Y. Wang, B. Wang, X. Ling, W. Gu, H. Wang, S. Zeng, W. Swaileh,
+                        <strong><a href="https://ieeexplore.ieee.org/document/10103912" target="_blank">"Hierarchical Threshold Pruning Based on Uniform Response Criterion"</a></strong>, Computers & Security journal.
+                    </span>
+                </li>
+                <li>
+                    <strong>2022: </strong>
+                    <span>Y. Quan, J. Wang, H. Wang, Z. Gu, B. Wang, S. Zeng, W. Swaileh,
+                        <strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167404822003352" target="_blank">"3-Visually imperceptible adversarial patch attacks"</a></strong>, Computers & Security journal.
+                    </span>
+                </li>
+                <li>
+                    <strong>2022: </strong>
+                    <span>A. Pitti, M. Quoy, C. Lavandier, S. Boucenna, W. Swaileh, C. Weidmann,
+                        <strong><a href="https://ieeexplore.ieee.org/document/9762837" target="_blank">"In search of a neural model for serial order: A brain theory for memory development and higher level cognition"</a></strong>, IEEE Transactions on Cognitive and Developmental Systems.
+                    </span>
+                </li>
+                <li>
+                    <strong>2018: </strong>
+                    <span>W. Swaileh, Y. Soullard, T. Paquet,
+                        <strong><a href="https://doi.org/10.1016/j.patrec.2018.07.027" target="_blank">"A Unified Multilingual Handwriting Recognition System using multigrams sub-lexical units"</a></strong>, Pattern Recognition Letters 121, 68-76.
+                    </span>
+                </li>
+            </ul>
         </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        <div id='publications-conferences'>
+            <h3>Publications in International Conference Proceedings</h3>
+            <ul>
+                <li>
+                    <strong>2022: </strong>
+                    <span>W. Swaileh, M. Jordan, D. Kotzinos, 
+                        <strong><a href="https://link.springer.com/chapter/10.1007/978-3-031-06555-2_42" target="_blank">"3D Modeling Approach for Ancient Floor Plans’ Quick Browsing"</a></strong>, The 15th International Workshop on Document Analysis Systems (DAS 2022).
+                    </span>
+                </li>
+                <li>
+                    <strong>2021: </strong>
+                    <span>W. Swaileh, D. Kotzinos, S. Ghosh, M. Jordan, S. Vu, Y. Qian, 
+                        <strong><a href="https://link.springer.com/chapter/10.1007/978-3-030-86549-8_3" target="_blank">"Versailles-FP dataset: Wall Detection in Ancient Floor Plans"</a></strong>, 16th International Conference on Document Analysis and Recognition (ICDAR 2021), Springer, Cham, 2021. p. 34-49.
+                    </span>
+                </li>
+                <li>
+                    <strong>2020: </strong>
+                    <span>W. Swaileh, T. Paquet, S. Adam, A. Rojas-Camacho,
+                        <strong><a href="https://link.springer.com/chapter/10.1007/978-3-030-57058-3_23" target="_blank">"A Named Entity Extraction System for Historical Financial Data"</a></strong>, The 14th International Workshop on Document Analysis Systems (DAS 2020), Springer, Cham, 2020. p. 324-340.
+                    </span>
+                </li>
+                <li>
+                    <strong>2019: </strong>
+                    <span>Y. Soullard, W. Swaileh, C. Chatelain, P. Tranouez, T. Paquet,
+                        <strong><a href="https://ieeexplore.ieee.org/document/8978128" target="_blank">"Improving text recognition using optical and language model writer adaptation"</a></strong>, The 15th IAPR International Conference on Document Analysis and Recognition (ICDAR 2019).
+                    </span>
+                </li>
+                <li>
+                    <strong>2017: </strong>
+                    <span>W. Swaileh, T. Paquet, Y. Soullard, P. Tranouez,
+                        <strong><a href="https://doi.org/10.1109/ICDAR.2017.31" target="_blank">"Handwriting Recognition with Multigrams"</a></strong>, 14th IAPR International Conference on Document Analysis and Recognition (ICDAR 2017).
+                    </span>
+                </li>
+                <li>
+                    <strong>2016: </strong>
+                    <span>W. Swaileh, J. Lerouge, T. Paquet,
+                        <strong><a href="https://doi.org/10.1109/ICFHR.2016.0104" target="_blank">"A unified French/English syllabic model for handwriting recognition"</a></strong>, 15th International Conference on Frontiers in Handwriting Recognition (ICFHR 2016).
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <div id='publications-national'>
+            <h3>Publications in National Journals</h3>
+            <ul>
+                <li>
+                    <strong>2023: </strong>
+                    <span>M. Jordan, D. Desbourdes, N. Priniotakis, W. Swaileh, B. Ringot,
+                        <strong><a href="https://journals.openedition.org/revuehn/3444" target="_blank">"Verspera, du plan d’époque à la visite virtuelle : une fructueuse collaboration interdisciplinaire"</a></strong>, Humanités numériques.
+                    </span>
+                </li>
+                <li>
+                    <strong>2016: </strong>
+                    <span>W. Swaileh, T. Paquet,
+                        <strong><a href="https://ieeexplore.ieee.org/document/7814120" target="_blank">"A syllabic model for French and English for handwriting recognition"</a></strong>, Document numérique 19 (2), 117-134.
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <div id='phd-thesis' class="highlight-section">
+            <h3>PhD Thesis</h3>
+            <ul>
+                <li>
+                    <strong>2017: </strong>
+                    <span>W. Swaileh,
+                        <strong><a href="https://theses.hal.science/tel-01781268" target="_blank">"Language Modelling for Handwriting Recognition"</a></strong>, 2017. PhD Thesis. University of Rouen Normandy.
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Highlighted Presentations Section -->
+        
+
+        <div id='presentations'>
+            <h3>Presentations in National or International Conferences</h3>
+            <ul>
+                <li>
+                    <strong>2022: </strong>
+                    <span>J. Mansouri, F. Cavarretta, W. Swaileh, D. Kotzinos,
+                        <strong><a href="https://hal.science/hal-03895960/" target="_blank">"Toward Deep neural network for pen trajectory reconstruction from kinematic sensors"</a></strong>, Symposium International Francophone sur l’Ecrit et le Document (SIFED'2022).
+                    </span>
+                </li>
+                <li>
+                    <strong>2021: </strong>
+                    <span>J. Mansouri, F. Cavarretta, W. Swaileh, D. Kotzinos,
+                        <strong><a href="https://faculty.essec.edu/en/research/completely-unsupervised-opinion-mining-in-online-professional-groups-discussions/" target="_blank">"Completely Unsupervised Opinion Mining in Professional Groups’ Discussions"</a></strong>, OpLaDyn Satellite of Networks 2021.
+                    </span>
+                </li>
+                <li>
+                    <strong>2016: </strong>
+                    <span>W. Swaileh, K. Ait Mohand, T. Paquet,
+                        <strong><a href="https://ieeexplore.ieee.org/document/7814120" target="_blank">"A syllabic model for handwriting recognition"</a></strong>, Proceedings of the CORIA-CIFED conference, Toulouse, pp. 23-37, 2016.
+                    </span>
+                </li>
+                <li>
+                    <strong>2015: </strong>
+                    <span>W. Swaileh, K. Ait Mohand, T. Paquet,
+                        <strong><a href="https://ieeexplore.ieee.org/document/7333962" target="_blank">"Multi-script Iterative Steerable Directional Filtering for Handwritten Text Line Extraction"</a></strong>, 5th International Workshop on Multilingual OCR at ICDAR 2015.
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <div id='submitted-articles'>
+            <h3>Submitted or Archived Articles</h3>
+            <ul>
+                <li>
+                    <strong>2024: </strong>
+                    <span>A. Diko, Y. Patras, T. Wang, W. Swaileh, S. Remes,
+                        <strong><a href="#" target="_blank">"Memory-Based Vision-Language Model for VQA and Captioning"</a></strong>, Computer Vision and Pattern Recognition Conference (CVPR 2025) [in submission].
+                    </span>
+                </li>
+                <li>
+                    <strong>2022: </strong>
+                    <span>Y. Qian, Y. Wang, B. Wang, Z. Gu, Y. Guo, W. Swaileh,
+                        <strong><a href="https://arxiv.org/abs/2207.01396" target="_blank">"Hessian-Free Second-Order Adversarial Examples for Adversarial Learning"</a></strong>, <arxiv:2022 class="01396"></arxiv:2022>.
+                    </span>
+                </li>
+                <li>
+                    <strong>2021: </strong>
+                    <span>Y. Qian, Q. Shao, T. Yao, B. Wang, S. Ji, S. Zeng, Z. Gu, W. Swaileh,
+                        <strong><a href="https://arxiv.org/abs/2102.00662" target="_blank">"Towards Speeding up Adversarial Training in Latent Spaces"</a></strong>, <arxiv:2021 class="00662"></arxiv:2021>.
+                    </span>
+                </li>
+                <li>
+                    <strong>2020: </strong>
+                    <span>S. Adam, S. Bouvier, B. Coüasnon, C. Guerry, A. Lemaitre, I. Le Floch, T. Paquet, A. Camacho, A. Fedioun, W. Swaileh,
+                        <strong><a href="https://hal.science/hal-03828225/document" target="_blank">"EurHisFirm M7.1: First version of the data extraction system"</a></strong>, HAL.
+                    </span>
+                </li>
+                <li>
+                    <strong>2020: </strong>
+                    <span>Y. Qian, X. Zhang, B. Wang, W. Li, Z. Gu, H. Wang, W. Swaileh,
+                        <strong><a href="https://arxiv.org/abs/2007.15836" target="_blank">"TEAM: We Need More Powerful Adversarial Examples for DNNs"</a></strong>, <arxiv:2007.15836>.
+                        </span>
+                    </li>
+                    <li>
+                        <strong>2020: </strong>
+                        <span>Y. Qian, X. Zhang, W. Swaileh, L. Wei, B. Wang, J. Chen, W. Zhou, J. Lei,
+                            <strong><a href="https://arxiv.org/abs/2001.08389" target="_blank">"TEAM: An Taylor Expansion-Based Method for Generating Adversarial Examples"</a></strong>, <arxiv:2001.08389></arxiv:2001.08389>.
+                        </span>
+                    </li>
+                    <li>
+                        <strong>2008: </strong>
+                        <span>W. Swaileh, S. Nicolas, C. Petitjean,
+                            <strong><a href="https://www.researchgate.net/publication/286919960_An_Evidential_Markov_Random_Fields_Model_For_Cardiac_MR_Image_Segmentation" target="_blank">"An Evidential Markov Random Fields Model For Cardiac MR Image Segmentation"</a></strong>, Scholar press (67 pages) ISBN:9783639862287.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+    
+            <div id='tutorials'>
+                <h3>Tutorials</h3>
+                <ul>
+                    <li>
+                        <strong>2018: </strong>
+                        <span>W. Swaileh, T. Paquet,
+                            <strong><a href="https://doi.org/10.13140/RG.2.2.23442.50880" target="_blank">"Introduction to the Kaldi/WFST Toolkit"</a></strong>, ResearchGate Methods, DOI: 10.13140/RG.2.2.23442.50880.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- JavaScript to handle scrolling and mask -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Scroll to the presentations section
+                const presentationsSection = document.getElementById('presentations');
+                presentationsSection.scrollIntoView({ behavior: 'smooth' });
+    
+                // Apply the mask
+                const mask = document.createElement('div');
+                mask.classList.add('mask');
+                document.body.appendChild(mask);
+            });
+    
+            function scrollToSection(sectionId) {
+                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>

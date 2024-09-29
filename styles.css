@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+.container {
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2, h3 {
+    color: #dd3333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}

@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wassim Swaileh - CV</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
+    <title>Wassim - CV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            margin: 40px;
             background-color: #f4f4f9;
             color: #333;
         }
         .container {
+            max-width: 800px;
             margin: auto;
             padding: 20px;
             background: white;
@@ -26,15 +24,30 @@
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
         }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
         .profile-pic {
+            float: right;
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
         }
+        .contact, .social-media {
+            margin-top: 20px;
+        }
         .social-media img {
             width: 25px;
+            height: auto;
             margin-right: 10px;
+        }
+        .publications {
+            margin-top: 30px;
         }
         .publications ul {
             padding-left: 20px;
@@ -55,64 +68,24 @@
         th {
             background-color: #f2f2f2;
         }
-        .nav-link {
-            cursor: pointer;
+        footer {
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Wassim Swaileh</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="scrollToSection('summary')">Summary</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="scrollToSection('research')">Research Areas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="scrollToSection('experience')">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="scrollToSection('publications')">Publications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="scrollToSection('awards')">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="scrollToSection('education')">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="scrollToSection('contact')">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container mt-4 animate__animated animate__fadeIn">
+    <div class="container">
         <header>
-            <div class="d-flex align-items-center">
-                <div class="me-3">
-                    <!--<img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">-->
-                </div>
-                <div>
-                    <h1>Wassim Swaileh</h1>
-                    <p><strong>PhD in Computer Science | Researcher in AI and Machine Learning</strong></p>
-                    <div class="contact">
-                        <p>Email: <a href="mailto:your.email@example.com">swaileh@hotmail.com</a></p>
-                        <p>Phone: +358 40 185 3001</p>
-                    </div>
-                </div>
+            <h1>Wassim Swaileh</h1>
+            <!--<img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">-->
+            <p><strong>PhD in Computer Science | Researcher in AI and Machine Learning</strong></p>
+            <div class="contact">
+                <p>Email: <a href="mailto:your.email@example.com">swaileh@hotmail.com</a></p>
+                <p>Phone: +358 40 185 3001</p>
             </div>
         </header>
 
-        <section id="summary" class="mt-4">
+        <section>
             <h2>Summary</h2>
             <p>
                 I hold a PhD in Computer Science, specializing in Machine Learning.
@@ -123,7 +96,7 @@
             </p>
         </section>
 
-        <section id="research" class="mt-4">
+        <section>
             <h2>Research Areas</h2>
             <ul>
                 <li>Visual Question Answering</li>
@@ -135,7 +108,7 @@
             </ul>
         </section>
 
-        <section id="experience" class="mt-4">
+        <section>
             <h2>Experience</h2>
             <h3>Principal Researcher, Huawei RTC Finland</h3>
             <p><em>10/2023-Present</em></p>
@@ -162,7 +135,7 @@
             </ul>
         </section>
 
-        <section id="publications" class="mt-4">
+        <section class="publications">
             <h2>Publications</h2>
             <h3>2023</h3>
             <ul>
@@ -177,14 +150,14 @@
             </ul>
         </section>
 
-        <section id="awards" class="mt-4">
+        <section>
             <h2>Awards</h2>
             <ul>
                 <li><strong>Best Paper Award</strong>, CIFED 2016</li>
             </ul>
         </section>
 
-        <section id="education" class="mt-4">
+        <section>
             <h2>Education</h2>
             <h3>PhD in Computer Science</h3>
             <p><em>Université de Rouen Normandie, France, 2013-2017</em></p>
@@ -196,9 +169,9 @@
             <p><em>Université de Sanaa, Yemen, 2005</em></p>
         </section>
 
-        <section id="supervisions" class="mt-4">
+        <section>
             <h2>Supervisions</h2>
-            <table class="table">
+            <table>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -235,12 +208,12 @@
             <p><em>Note: CY Cergy Paris Université (France) / Zhejiang University (China)</em></p>
         </section>
 
-        <section id="professional-experience" class="mt-4">
+        <section>
             <h2>Professional Experience</h2>
             <h3>Technical Director, Al-Saeedah Television, Sanaa, Yemen</h3>
             <p><em>2009-2013</em></p>
             <ul>
-                <li>Constructed transmission channels, designed and installed an O.B.Van, and a 3D virtual reality studio.</li>
+                <li>Constructed transmission channels, designed and installed an O.B.Van, and            a 3D virtual reality studio.</li>
             </ul>
 
             <h3>Technical and IT Advisor, Yemen FM Radio, Sanaa, Yemen</h3>
@@ -250,7 +223,7 @@
             </ul>
         </section>
 
-        <section id="other-activities" class="mt-4">
+        <section>
             <h2>Other Activities</h2>
             <h3>Reviewer for International Journals and Conferences</h3>
             <ul>
@@ -265,24 +238,17 @@
             </ul>
         </section>
 
-        <footer id="contact" class="mt-4">
+        <footer>
             <h2>Contact</h2>
             <p>
-                For more details, please reach out via <a href="mailto:your.email@example.com">swaileh@hotmail.com</a>.
+                For contact details, please reach out via <a href="mailto:your.email@example.com">swaileh@hotmail.com</a>.
             </p>
             <div class="social-media">
-                <a href="https://www.linkedin.com/in/yourprofile/" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/linkedin.svg" alt="LinkedIn"> LinkedIn</a>
-                <a href="https://github.com/yourprofile" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/github.svg" alt="GitHub"> GitHub</a>
-                <a href="https://yourblog.com" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/blogger.svg" alt="Blog"> Blog</a>
+                <a href="https://www.linkedin.com/in/yourprofile/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"> LinkedIn</a>
+                <a href="https://github.com/yourprofile" target="_blank"><img src="github-icon.png" alt="GitHub"> GitHub</a>
+                <a href="https://yourblog.com" target="_blank"><img src="blog-icon.png" alt="Blog"> Blog</a>
             </div>
         </footer>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>

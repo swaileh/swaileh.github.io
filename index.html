@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="style.css">
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -173,8 +171,6 @@
                 <li>Information extraction in digitized historical documents</li>
             </ul>
         </section>
-
-        <div id="academicExperienceContainer"></div> <!-- Placeholder for academic experience -->
 
         <section id="publications" class="mt-4">
             <h2>Publications</h2>
@@ -350,17 +346,17 @@
                         </li>
                     </ul>
                 </div>
-        </section>
-
-        <section id="awards" class="mt-4">
-            <h2>Awards</h2>
+            </section>
+    
+            <section id="awards" class="mt-4">
+                <h2>Awards</h2>
                 <ul>
                     <li><strong>Best Paper Award</strong>, CIFED 2016</li>
                 </ul>
-        </section>
-
-        <section id="education" class="mt-4">
-            <h2>Education</h2>
+            </section>
+    
+            <section id="education" class="mt-4">
+                <h2>Education</h2>
                 <h3>PhD in Computer Science</h3>
                 <p><em>Université de Rouen Normandie, France, 2013-2017</em></p>
     
@@ -369,10 +365,10 @@
     
                 <h3>Engineering Degree in Computer Engineering and Control</h3>
                 <p><em>Université de Sanaa, Yemen, 2005</em></p>
-        </section>
-
-        <section id="supervisions" class="mt-4">
-            <h2>Supervisions</h2>
+            </section>
+    
+            <section id="supervisions" class="mt-4">
+                <h2>Supervisions</h2>
                 <table class="table">
                     <thead>
                         <tr>
@@ -408,10 +404,10 @@
                     </tbody>
                 </table>
                 <p><em>Note: CY Cergy Paris Université (France) / Zhejiang University (China)</em></p>
-        </section>
-
-        <section id="professional-experience" class="mt-4">
-            <h2>Professional Experience</h2>
+            </section>
+    
+            <section id="professional-experience" class="mt-4">
+                <h2>Professional Experience</h2>
                 <h3>Technical Director, Al-Saeedah Television, Sanaa, Yemen</h3>
                 <p><em>2009-2013</em></p>
                 <ul>
@@ -423,10 +419,10 @@
                 <ul>
                     <li>Designed and implemented an audio transmission channel using the E1 protocol, linking the studio to the broadcast center.</li>
                 </ul>
-        </section>
-
-        <section id="other-activities" class="mt-4">
-            <h2>Other Activities</h2>
+            </section>
+    
+            <section id="other-activities" class="mt-4">
+                <h2>Other Activities</h2>
                 <h3>Reviewer for International Journals and Conferences</h3>
                 <ul>
                     <li>DAS 2022</li>
@@ -438,30 +434,26 @@
                 <ul>
                     <li>GREYC Laboratory, IRISA, ETIS</li>
                 </ul>
-        </section>
-
-        <footer id="contact" class="mt-4">
-            <h2>Contact</h2>
-            <p>
-                For more details, please reach out via <a href="mailto:your.email@example.com">swaileh@hotmail.com</a>.
-            </p>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/wassim-swaileh-3198bb65/" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/linkedin.svg" alt="LinkedIn"> LinkedIn</a>
-                <a href="https://github.com/swaileh" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/github.svg" alt="GitHub"> GitHub</a>
-            </div>
-        </footer>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        // Load academic experience content
-        fetch('academic_experience.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('academicExperienceContainer').innerHTML = data);
-    </script>
-</body>
-</html>
+            </section>
+    
+            <footer id="contact" class="mt-4">
+                <h2>Contact</h2>
+                <p>
+                    For more details, please reach out via <a href="mailto:your.email@example.com">swaileh@hotmail.com</a>.
+                </p>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/wassim-swaileh-3198bb65/" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/linkedin.svg" alt="LinkedIn"> LinkedIn</a>
+                    <a href="https://github.com/swaileh" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/github.svg" alt="GitHub"> GitHub</a>
+                    <!--<a href="https://yourblog.com" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/blogger.svg" alt="Blog"> Blog</a>-->
+                </div>
+            </footer>
+        </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function scrollToSection(sectionId) {
+                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
+    </body>
+    </html>

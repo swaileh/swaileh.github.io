@@ -317,6 +317,10 @@
     
             function scrollToSection(sectionId) {
                 document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+                // Apply the mask
+                const mask = document.createElement('div');
+                mask.classList.add('mask');
+                document.body.appendChild(mask);
             }
         </script>
     

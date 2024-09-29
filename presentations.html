@@ -9,7 +9,49 @@
 </head>
 <body>
     <?php include 'navbar.php'; ?>
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Personal Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="summary.html">Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html">Research Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="experience.html">Experience</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
+                        <ul class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                            <li><a class="dropdown-item" onclick="scrollToSection('publications-journals')">Publications in International Journals</a></li>
+                            <li><a class="dropdown-item" onclick="scrollToSection('publications-conferences')">Publications in International Conference Proceedings</a></li>
+                            <li><a class="dropdown-item" onclick="scrollToSection('publications-national')">Publications in National Journals</a></li>
+                            <li><a class="dropdown-item" onclick="scrollToSection('phd-thesis')">PhD Thesis</a></li>
+                            <li><a class="dropdown-item" onclick="scrollToSection('presentations')">Presentations in National or International Conferences</a></li>
+                            <li><a class="dropdown-item" onclick="scrollToSection('submitted-articles')">Submitted or Archived Articles</a></li>
+                            <li><a class="dropdown-item" onclick="scrollToSection('tutorials')">Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="awards.html">Awards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="education.html">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container mt-4">
         <section id="publications-journals">
         <h2>Publications</h2>

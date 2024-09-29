@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.section h2 {
+    color: #dd3333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+blockquote {
+    font-size: 1.1em;
+    color: #666;
+    border-left: 5px solid #ddd;
+    padding-left: 10px;
+    margin: 20px 0;
+}
+
+.list ul {
+    padding-left: 20px;
+}
+
+.list li {
+    margin-bottom: 10px;
+}

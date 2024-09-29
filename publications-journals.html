@@ -302,7 +302,11 @@
     
         <!-- JavaScript to handle scrolling and mask -->
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            
+    
+            function scrollToSection(sectionId) {
+                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+                document.addEventListener("DOMContentLoaded", function() {
                 // Scroll to the presentations section
                 const presentationsSection = document.getElementById('publications-journals');
                 presentationsSection.scrollIntoView({ behavior: 'smooth' });
@@ -312,13 +316,6 @@
                 mask.classList.add('mask');
                 document.body.appendChild(mask);
             });
-    
-            function scrollToSection(sectionId) {
-                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-                // Apply the mask
-                const mask = document.createElement('div');
-                mask.classList.add('mask');
-                document.body.appendChild(mask);
             }
         </script>
     

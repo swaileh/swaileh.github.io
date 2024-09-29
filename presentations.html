@@ -62,6 +62,23 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
                         <ul class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                            <!-- JavaScript to handle scrolling and mask -->
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    // Scroll to the presentations section
+                                    const presentationsSection = document.getElementById('publications-conferences');
+                                    presentationsSection.scrollIntoView({ behavior: 'smooth' });
+                        
+                                    // Apply the mask
+                                    const mask = document.createElement('div');
+                                    mask.classList.add('mask');
+                                    document.body.appendChild(mask);
+                                });
+                        
+                                function scrollToSection(sectionId) {
+                                    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+                                }
+                            </script>
                             <li><a class="dropdown-item" onclick="scrollToSection('publications-journals')">Publications in International Journals</a></li>
                             <li><a class="dropdown-item" onclick="scrollToSection('publications-conferences')">Publications in International Conference Proceedings</a></li>
                             <li><a class="dropdown-item" onclick="scrollToSection('publications-national')">Publications in National Journals</a></li>

@@ -316,26 +316,17 @@
                 // Apply a new mask to the selected section
                 const mask = document.createElement('div');
                 mask.classList.add('mask');
-        
-                // Calculate the position and size of the target section
-                const rect = targetSection.getBoundingClientRect();
-                
-                // Position the mask to cover the target section
-                mask.style.top = rect.top + window.scrollY + 'px';
-                mask.style.left = rect.left + 'px';
-                mask.style.width = rect.width + 'px';
-                mask.style.height = rect.height + 'px';
-        
                 document.body.appendChild(mask);
+        
+                const rect = targetSection.getBoundingClientRect();
+                mask.style.clipPath = `inset(${rect.top}px ${window.innerWidth - rect.right}px ${window.innerHeight - rect.bottom}px ${rect.left}px)`;
             }
         
             document.addEventListener("DOMContentLoaded", function() {
-                // Add event listeners to each dropdown item
                 const dropdownItems = document.querySelectorAll('.dropdown-item');
                 dropdownItems.forEach(item => {
-                    item.addEventListener('click', function(event) {
-                        // Extract sectionId from onclick attribute
-                        const sectionId = event.target.getAttribute('onclick').match(/'(.+)'/)[1];
+                    item.addEventListener('click', function() {
+                        const sectionId = this.getAttribute('onclick').match(/'(.*)'/)[1];
                         scrollToSection(sectionId);
                     });
                 });

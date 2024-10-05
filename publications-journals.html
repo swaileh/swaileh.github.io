@@ -302,21 +302,35 @@
     
         <!-- JavaScript to handle scrolling and mask -->
         <script>
-            
-    
             function scrollToSection(sectionId) {
-                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-                document.addEventListener("DOMContentLoaded", function() {
-                // Scroll to the presentations section
-                const presentationsSection = document.getElementById('publications-journals');
-                presentationsSection.scrollIntoView({ behavior: 'smooth' });
-    
-                // Apply the mask
+                // Scroll to the target section
+                const targetSection = document.getElementById(sectionId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+        
+                // Remove any existing mask
+                const existingMask = document.querySelector('.mask');
+                if (existingMask) {
+                    existingMask.remove();
+                }
+        
+                // Apply a new mask to the selected section
                 const mask = document.createElement('div');
                 mask.classList.add('mask');
                 document.body.appendChild(mask);
-            });
+        
+                const rect = targetSection.getBoundingClientRect();
+                mask.style.clipPath = `inset(${rect.top}px ${window.innerWidth - rect.right}px ${window.innerHeight - rect.bottom}px ${rect.left}px)`;
             }
+        
+            document.addEventListener("DOMContentLoaded", function() {
+                const dropdownItems = document.querySelectorAll('.dropdown-item');
+                dropdownItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const sectionId = this.getAttribute('onclick').match(/'(.*)'/)[1];
+                        scrollToSection(sectionId);
+                    });
+                });
+            });
         </script>
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>

@@ -26,16 +26,14 @@
             z-index: 1000;
         }
         .highlight-section::before {
-            content: "";
             position: absolute;
-            top: -15px;
-            left: -15px;
-            right: -15px;
-            bottom: -15px;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
             background: rgba(153, 205, 50, 0.459);
-            opacity: 0.5;
-            pointer-events: none;
-            z-index: 998;
+            opacity: 0.5; 
+            z-index: -1; 
             border-radius: 10px;
         }
     </style>
@@ -302,31 +300,28 @@
     
         <!-- JavaScript to handle scrolling and mask -->
         <script>
+            // Function to scroll to a section and apply the mask
             function scrollToSection(sectionId) {
-                // Scroll to the target section
+                // Scroll smoothly to the selected section
                 const targetSection = document.getElementById(sectionId);
                 targetSection.scrollIntoView({ behavior: 'smooth' });
         
-                // Remove any existing mask
-                const existingMask = document.querySelector('.mask');
-                if (existingMask) {
-                    existingMask.remove();
+                // Remove 'highlight-section' class from any previously focused section
+                const previousHighlighted = document.querySelector('.highlight-section');
+                if (previousHighlighted) {
+                    previousHighlighted.classList.remove('highlight-section');
                 }
         
-                // Apply a new mask to the selected section
-                const mask = document.createElement('div');
-                mask.classList.add('mask');
-                document.body.appendChild(mask);
-        
-                const rect = targetSection.getBoundingClientRect();
-                mask.style.clipPath = `inset(${rect.top}px ${window.innerWidth - rect.right}px ${window.innerHeight - rect.bottom}px ${rect.left}px)`;
+                // Add 'highlight-section' class to the current selection to apply background
+                targetSection.classList.add('highlight-section');
             }
         
             document.addEventListener("DOMContentLoaded", function() {
+                // Add event listeners to each dropdown item
                 const dropdownItems = document.querySelectorAll('.dropdown-item');
                 dropdownItems.forEach(item => {
                     item.addEventListener('click', function() {
-                        const sectionId = this.getAttribute('onclick').match(/'(.*)'/)[1];
+                        const sectionId = this.getAttribute('onclick').match(/'(.+)'/)[1];
                         scrollToSection(sectionId);
                     });
                 });

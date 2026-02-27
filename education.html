@@ -1,70 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Education Background - Wassim Swaileh">
     <title>Education - Wassim Swaileh</title>
+    
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Personal Page</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code me-2"></i>Wassim Swaileh
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="summary.html">Summary</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="research.html">Research Areas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="experience.html">Experience</a>
-                    </li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="summary.html"><i class="fas fa-user me-1"></i>Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html"><i class="fas fa-flask me-1"></i>Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html"><i class="fas fa-briefcase me-1"></i>Experience</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
-                        <ul class="dropdown-menu" aria-labelledby="publicationsDropdown">
-                            <li><a class="dropdown-item" href="publications-journals.html">International Journals</a></li>
-                            <li><a class="dropdown-item" href="publications-conferences.html">Conference Proceedings</a></li>
-                            <li><a class="dropdown-item" href="publications-national.html">National Journals</a></li>
-                            <li><a class="dropdown-item" href="phd-thesis.html">PhD Thesis</a></li>
-                            <li><a class="dropdown-item" href="presentations.html">Presentations</a></li>
-                            <li><a class="dropdown-item" href="submitted-articles.html">Submitted Articles</a></li>
-                            <li><a class="dropdown-item" href="tutorials.html">Tutorials</a></li>
+                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book me-1"></i>Publications
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="publications-journals.html"><i class="fas fa-journal-whills me-2"></i>International Journals</a></li>
+                            <li><a class="dropdown-item" href="publications-conferences.html"><i class="fas fa-users me-2"></i>Conference Proceedings</a></li>
+                            <li><a class="dropdown-item" href="publications-national.html"><i class="fas fa-flag me-2"></i>National Journals</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="phd-thesis.html"><i class="fas fa-graduation-cap me-2"></i>PhD Thesis</a></li>
+                            <li><a class="dropdown-item" href="presentations.html"><i class="fas fa-presentation me-2"></i>Presentations</a></li>
+                            <li><a class="dropdown-item" href="submitted-articles.html"><i class="fas fa-paper-plane me-2"></i>Submitted Articles</a></li>
+                            <li><a class="dropdown-item" href="tutorials.html"><i class="fas fa-chalkboard-teacher me-2"></i>Tutorials</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="awards.html">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="education.html">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                    <li class="nav-item"><a class="nav-link" href="awards.html"><i class="fas fa-trophy me-1"></i>Awards</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="education.html"><i class="fas fa-university me-1"></i>Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container mt-4">
-        <section id="education">
-            <h2>Education</h2>
-            <h3>PhD in Computer Science</h3>
-            <p><em>Université de Rouen Normandie, France, 2013-2017</em></p>
 
-            <h3>Master 2 in Computer Engineering (IGIS)</h3>
-            <p><em>Université de Rouen, France, 2007-2008</em></p>
+    <!-- Main Content -->
+    <div style="margin-top: 80px;">
+        <div class="container mt-4">
+            <!-- Page Header -->
+            <div class="scrolling-text mb-4">
+                <h3><i class="fas fa-graduation-cap me-2"></i>Education</h3>
+            </div>
 
-            <h3>Engineering Degree in Computer Engineering and Control</h3>
-            <p><em>Université de Sanaa, Yemen, 2005</em></p>
-        </section>
+            <!-- Education Timeline -->
+            <section id="education" class="animate-fadeInUp">
+                <h2><i class="fas fa-university me-2 text-primary"></i>Academic Background</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2013 - 2017</div>
+                        <div class="timeline-title">PhD in Computer Science</div>
+                        <div class="timeline-company">Université de Rouen Normandie, France</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-thesis me-2 text-primary"></i>Thesis</h5>
+                                <p class="card-text">"Language Modelling for Handwriting Recognition"</p>
+                                <a href="phd-thesis.html" class="btn btn-outline btn-sm">
+                                    <i class="fas fa-external-link-alt me-1"></i>View Thesis Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2007 - 2008</div>
+                        <div class="timeline-title">Master 2 in Computer Engineering (IGIS)</div>
+                        <div class="timeline-company">Université de Rouen, France</div>
+                        <p class="mt-2">Specialized in computer engineering with focus on advanced software development and systems engineering.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2005</div>
+                        <div class="timeline-title">Engineering Degree in Computer Engineering and Control</div>
+                        <div class="timeline-company">Université de Sanaa, Yemen</div>
+                        <p class="mt-2">Comprehensive engineering program covering computer science fundamentals, control systems, and software engineering.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications & Skills -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-certificate me-2 text-primary"></i>Key Competencies</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-brain fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="card-title text-center">Machine Learning</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Deep Learning</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Neural Networks</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Computer Vision</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>NLP</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-code fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="card-title text-center">Programming</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Python</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>TensorFlow/PyTorch</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>C/C++</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>MATLAB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="text-center mb-3">
+                                    <i class="fas fa-language fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="card-title text-center">Languages</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>English (Fluent)</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>French (Fluent)</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Arabic (Native)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="animate-fadeInUp text-center py-5 my-5" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(245, 158, 11, 0.05)); border-radius: var(--radius-xl);">
+                <h2 class="mb-3">View My Work</h2>
+                <p class="lead text-secondary mb-4">Explore my research publications and professional experience</p>
+                <a href="publications-journals.html" class="btn btn-primary me-2">
+                    <i class="fas fa-book me-2"></i>Publications
+                </a>
+                <a href="experience.html" class="btn btn-outline">
+                    <i class="fas fa-briefcase me-2"></i>Experience
+                </a>
+            </section>
+        </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h5 class="mb-2">Wassim Swaileh</h5>
+                <p class="mb-0">Data Scientist & AI Researcher</p>
+            </div>
+            <div class="text-lg-end">
+                <p>&copy; 2024 Wassim Swaileh. All rights reserved.</p>
+                <p class="mb-0">
+                    <a href="contact.html">Contact</a> | 
+                    <a href="https://github.com/swaileh" target="_blank">GitHub</a> | 
+                    <a href="https://www.linkedin.com/in/wassim-swaileh-3198bb65/" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
 </body>
 </html>

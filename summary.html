@@ -1,72 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Summary - Wassim Swaileh">
     <title>Summary - Wassim Swaileh</title>
+    
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Personal Page</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code me-2"></i>Wassim Swaileh
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="summary.html">Summary</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="research.html">Research Areas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="experience.html">Experience</a>
-                    </li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="summary.html"><i class="fas fa-user me-1"></i>Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html"><i class="fas fa-flask me-1"></i>Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html"><i class="fas fa-briefcase me-1"></i>Experience</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
-                        <ul class="dropdown-menu" aria-labelledby="publicationsDropdown">
-                            <li><a class="dropdown-item" href="publications-journals.html">International Journals</a></li>
-                            <li><a class="dropdown-item" href="publications-conferences.html">Conference Proceedings</a></li>
-                            <li><a class="dropdown-item" href="publications-national.html">National Journals</a></li>
-                            <li><a class="dropdown-item" href="phd-thesis.html">PhD Thesis</a></li>
-                            <li><a class="dropdown-item" href="presentations.html">Presentations</a></li>
-                            <li><a class="dropdown-item" href="submitted-articles.html">Submitted Articles</a></li>
-                            <li><a class="dropdown-item" href="tutorials.html">Tutorials</a></li>
+                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book me-1"></i>Publications
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="publications-journals.html"><i class="fas fa-journal-whills me-2"></i>International Journals</a></li>
+                            <li><a class="dropdown-item" href="publications-conferences.html"><i class="fas fa-users me-2"></i>Conference Proceedings</a></li>
+                            <li><a class="dropdown-item" href="publications-national.html"><i class="fas fa-flag me-2"></i>National Journals</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="phd-thesis.html"><i class="fas fa-graduation-cap me-2"></i>PhD Thesis</a></li>
+                            <li><a class="dropdown-item" href="presentations.html"><i class="fas fa-presentation me-2"></i>Presentations</a></li>
+                            <li><a class="dropdown-item" href="submitted-articles.html"><i class="fas fa-paper-plane me-2"></i>Submitted Articles</a></li>
+                            <li><a class="dropdown-item" href="tutorials.html"><i class="fas fa-chalkboard-teacher me-2"></i>Tutorials</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="awards.html">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="education.html">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                    <li class="nav-item"><a class="nav-link" href="awards.html"><i class="fas fa-trophy me-1"></i>Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html"><i class="fas fa-university me-1"></i>Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>
-                I am an accomplished Data Scientist with a PhD in Computer Science, specializing in Machine Learning. 
-                My extensive experience spans several cutting-edge domains, including multimodal language models, generative diffusion models, 
-                trajectory reconstruction, information extraction, and language modeling. Leveraging my expertise, I have contributed to significant 
-                advancements in Visual Question Answering, Pattern Recognition, and Natural Language Processing. 
-                Throughout my career, I have held reputable research and academic positions at esteemed institutions such as the University of Rouen Normandy, 
-                INSA Rennes, CY Cergy Paris Université, and Huawei RTC Finland. My work is driven by a passion for innovative solutions and a commitment 
-                to advancing the field of machine learning and data science.
-            </p>
-        </section>
+    <!-- Main Content -->
+    <div style="margin-top: 80px;">
+        <div class="container mt-4">
+            <!-- Page Header -->
+            <div class="scrolling-text mb-4">
+                <h3><i class="fas fa-user-circle me-2"></i>Professional Summary</h3>
+            </div>
+
+            <!-- Profile Section -->
+            <section class="animate-fadeInUp">
+                <div class="profile-section">
+                    <img src="profile-pic.jpg" alt="Wassim Swaileh" class="profile-pic">
+                    <div class="profile-info">
+                        <h1>Wassim Swaileh</h1>
+                        <p class="title">Data Scientist | PhD in Computer Science | Researcher in AI and Machine Learning</p>
+                        <div class="contact-info">
+                            <a href="mailto:swaileh@hotmail.com"><i class="fas fa-envelope"></i> swaileh@hotmail.com</a>
+                            <a href="tel:+358401853001"><i class="fas fa-phone"></i> +358 40 185 3001</a>
+                            <span><i class="fas fa-map-marker-alt"></i> Finland</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-info-circle me-2 text-primary"></i>About Me</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="lead">I am an accomplished <strong>Data Scientist</strong> with a <strong>PhD in Computer Science</strong>, specializing in Machine Learning. My extensive experience spans several cutting-edge domains, including multimodal language models, generative diffusion models, trajectory reconstruction, information extraction, and language modeling.</p>
+                        
+                        <p>Leveraging my expertise, I have contributed to significant advancements in:</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="custom-list">
+                                    <li>Visual Question Answering</li>
+                                    <li>Pattern Recognition</li>
+                                    <li>Natural Language Processing</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="custom-list">
+                                    <li>Document Analysis</li>
+                                    <li>Deep Learning Systems</li>
+                                    <li>AI Model Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p>Throughout my career, I have held reputable research and academic positions at esteemed institutions such as the <strong>University of Rouen Normandy</strong>, <strong>INSA Rennes</strong>, <strong>CY Cergy Paris Université</strong>, and <strong>Huawei RTC Finland</strong>. My work is driven by a passion for innovative solutions and a commitment to advancing the field of machine learning and data science.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expertise Areas -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-brain me-2 text-primary"></i>Core Expertise</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+                                <h4 class="card-title">Machine Learning</h4>
+                                <p class="card-text">Deep expertise in developing and deploying ML models for complex real-world problems</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <i class="fas fa-eye fa-3x text-primary mb-3"></i>
+                                <h4 class="card-title">Computer Vision</h4>
+                                <p class="card-text">Visual Question Answering, image analysis, and document processing systems</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <i class="fas fa-language fa-3x text-primary mb-3"></i>
+                                <h4 class="card-title">NLP</h4>
+                                <p class="card-text">Natural language processing, text analysis, and language modeling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Career Highlights -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-star me-2 text-primary"></i>Career Highlights</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - Present</div>
+                        <div class="timeline-title">Principal Senior Researcher</div>
+                        <div class="timeline-company">Huawei RTC Finland</div>
+                        <p class="mt-2">Leading research on multimodal AI models and generative diffusion-based systems</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <div class="timeline-title">Postdoctoral Researcher</div>
+                        <div class="timeline-company">INSA Rennes, France</div>
+                        <p class="mt-2">Reconstruction of pen trajectories using deep learning techniques</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <div class="timeline-title">Contractual Associate Professor</div>
+                        <div class="timeline-company">CY Cergy Paris Université</div>
+                        <p class="mt-2">Document analysis and 3D modeling of ancient maps</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018 - 2019</div>
+                        <div class="timeline-title">Postdoctoral Researcher</div>
+                        <div class="timeline-company">University of Rouen Normandy</div>
+                        <p class="mt-2">Information extraction in digitized historical documents</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Connect CTA -->
+            <section class="animate-fadeInUp text-center py-5 my-5" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(245, 158, 11, 0.05)); border-radius: var(--radius-xl);">
+                <h2 class="mb-3">Get In Touch</h2>
+                <p class="lead text-secondary mb-4">Interested in collaborating or learning more about my work?</p>
+                <a href="contact.html" class="btn btn-primary">
+                    <i class="fas fa-envelope me-2"></i>Contact Me
+                </a>
+            </section>
+        </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h5 class="mb-2">Wassim Swaileh</h5>
+                <p class="mb-0">Data Scientist & AI Researcher</p>
+            </div>
+            <div class="text-lg-end">
+                <p>&copy; 2024 Wassim Swaileh. All rights reserved.</p>
+                <p class="mb-0">
+                    <a href="contact.html">Contact</a> | 
+                    <a href="https://github.com/swaileh" target="_blank">GitHub</a> | 
+                    <a href="https://www.linkedin.com/in/wassim-swaileh-3198bb65/" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
 </body>
 </html>

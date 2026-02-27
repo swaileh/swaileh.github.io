@@ -1,86 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Experience - Wassim Swaileh">
     <title>Experience - Wassim Swaileh</title>
+    
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Personal Page</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code me-2"></i>Wassim Swaileh
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="summary.html">Summary</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="research.html">Research Areas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="experience.html">Experience</a>
-                    </li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="summary.html"><i class="fas fa-user me-1"></i>Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html"><i class="fas fa-flask me-1"></i>Research</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="experience.html"><i class="fas fa-briefcase me-1"></i>Experience</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
-                        <ul class="dropdown-menu" aria-labelledby="publicationsDropdown">
-                            <li><a class="dropdown-item" href="publications-journals.html">International Journals</a></li>
-                            <li><a class="dropdown-item" href="publications-conferences.html">Conference Proceedings</a></li>
-                            <li><a class="dropdown-item" href="publications-national.html">National Journals</a></li>
-                            <li><a class="dropdown-item" href="phd-thesis.html">PhD Thesis</a></li>
-                            <li><a class="dropdown-item" href="presentations.html">Presentations</a></li>
-                            <li><a class="dropdown-item" href="submitted-articles.html">Submitted Articles</a></li>
-                            <li><a class="dropdown-item" href="tutorials.html">Tutorials</a></li>
+                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book me-1"></i>Publications
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="publications-journals.html"><i class="fas fa-journal-whills me-2"></i>International Journals</a></li>
+                            <li><a class="dropdown-item" href="publications-conferences.html"><i class="fas fa-users me-2"></i>Conference Proceedings</a></li>
+                            <li><a class="dropdown-item" href="publications-national.html"><i class="fas fa-flag me-2"></i>National Journals</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="phd-thesis.html"><i class="fas fa-graduation-cap me-2"></i>PhD Thesis</a></li>
+                            <li><a class="dropdown-item" href="presentations.html"><i class="fas fa-presentation me-2"></i>Presentations</a></li>
+                            <li><a class="dropdown-item" href="submitted-articles.html"><i class="fas fa-paper-plane me-2"></i>Submitted Articles</a></li>
+                            <li><a class="dropdown-item" href="tutorials.html"><i class="fas fa-chalkboard-teacher me-2"></i>Tutorials</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="awards.html">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="education.html">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                    <li class="nav-item"><a class="nav-link" href="awards.html"><i class="fas fa-trophy me-1"></i>Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html"><i class="fas fa-university me-1"></i>Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <section id="experience">
-            <h2>Experience</h2>
-            <h3>Principal Senior Researcher, Huawei RTC Finland</h3>
-            <p><em>2023-Present</em></p>
-            <ul>
-                <li>Leading research on multimodal AI models and generative diffusion-based systems</li>
-            </ul>
+    <!-- Main Content -->
+    <div style="margin-top: 80px;">
+        <div class="container mt-4">
+            <!-- Page Header -->
+            <div class="scrolling-text mb-4">
+                <h3><i class="fas fa-briefcase me-2"></i>Professional Experience</h3>
+            </div>
 
-            <h3>Postdoctoral Researcher, INSA Rennes</h3>
-            <p><em>2021-2023</em></p>
-            <ul>
-                <li>Reconstruction of pen trajectories using deep learning</li>
-            </ul>
+            <!-- Research Experience -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-microscope me-2 text-primary"></i>Research Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - Present</div>
+                        <div class="timeline-title">Principal Senior Researcher</div>
+                        <div class="timeline-company">Huawei RTC Finland</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text">Leading cutting-edge research on multimodal AI models and generative diffusion-based systems at Huawei's Research and Technology Center in Finland.</p>
+                                <ul class="custom-list mb-0">
+                                    <li>Leading research on multimodal language models</li>
+                                    <li>Developing generative diffusion-based systems</li>
+                                    <li>Advancing vision-language model architectures</li>
+                                    <li>Memory-based vision-language model for VQA and Captioning (CVPR 2025 submission)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <div class="timeline-title">Postdoctoral Researcher</div>
+                        <div class="timeline-company">INSA Rennes, France</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text">Research focused on trajectory reconstruction using deep learning techniques.</p>
+                                <ul class="custom-list mb-0">
+                                    <li>Reconstruction of pen trajectories using deep learning</li>
+                                    <li>Temporal Convolutional Networks (TCN) for sequence modeling</li>
+                                    <li>Kinematic sensor data analysis</li>
+                                    <li>Published in International Journal on Document Analysis and Recognition (IJDAR)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <div class="timeline-title">Contractual Associate Professor (ATER)</div>
+                        <div class="timeline-company">CY Cergy Paris Université, France</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text">Combined research and teaching responsibilities with focus on document analysis and digital humanities.</p>
+                                <ul class="custom-list mb-0">
+                                    <li>Document analysis and 3D modeling of ancient maps</li>
+                                    <li>Versailles-FP dataset: Wall Detection in Ancient Floor Plans</li>
+                                    <li>Deep learning for image segmentation</li>
+                                    <li>Supervision of Master and PhD students</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018 - 2019</div>
+                        <div class="timeline-title">Postdoctoral Researcher</div>
+                        <div class="timeline-company">University of Rouen Normandy, France</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text">Research in historical document analysis and information extraction.</p>
+                                <ul class="custom-list mb-0">
+                                    <li>Information extraction in digitized historical documents</li>
+                                    <li>Named Entity Recognition for historical financial data</li>
+                                    <li>Document Analysis Systems (DAS 2020 publication)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <h3>Contractual Associate Professor, CY Cergy Paris Université</h3>
-            <p><em>2019-2021</em></p>
-            <ul>
-                <li>Document analysis and 3D modeling of ancient maps</li>
-            </ul>
+            <!-- Professional Experience -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-industry me-2 text-primary"></i>Professional Experience</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #dc2626, #ef4444);">
+                                        <i class="fas fa-tv"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="card-title mb-0">Technical Director</h4>
+                                        <p class="text-secondary mb-0">Al-Saeedah Television, Yemen</p>
+                                    </div>
+                                </div>
+                                <p class="card-subtitle mb-2">2009 - 2013</p>
+                                <ul class="custom-list mb-0">
+                                    <li>Constructed transmission channels</li>
+                                    <li>Designed and installed O.B.Van</li>
+                                    <li>Built 3D virtual reality studio</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #0891b2, #06b6d4);">
+                                        <i class="fas fa-broadcast-tower"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="card-title mb-0">Technical & IT Advisor</h4>
+                                        <p class="text-secondary mb-0">Yemen FM Radio</p>
+                                    </div>
+                                </div>
+                                <p class="card-subtitle mb-2">2012 - 2013</p>
+                                <ul class="custom-list mb-0">
+                                    <li>Designed audio transmission channel</li>
+                                    <li>Implemented E1 protocol system</li>
+                                    <li>Linked studio to broadcast center</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <h3>Postdoctoral Researcher, University of Rouen Normandy</h3>
-            <p><em>2018-2019</em></p>
-            <ul>
-                <li>Information extraction in digitized historical documents</li>
-            </ul>
-        </section>
+            <!-- Academic Supervision -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-users me-2 text-primary"></i>Academic Supervision</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text mb-3">Mentoring the next generation of researchers through supervision of doctoral and master's students:</p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Degree</th>
+                                        <th>Subject</th>
+                                        <th>Institution</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Florent Imbert</td>
+                                        <td><span class="badge">Doctoral</span></td>
+                                        <td>Pen trajectory reconstruction</td>
+                                        <td>IRISA</td>
+                                        <td>2021-2022</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jafar Mansori</td>
+                                        <td><span class="badge">Post-doc</span></td>
+                                        <td>Unsupervised text data exploration</td>
+                                        <td>ETIS</td>
+                                        <td>2019-2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Andrianavalona Harinaivo</td>
+                                        <td><span class="badge">Master 2</span></td>
+                                        <td>Ancient map image segmentation (Deep Learning)</td>
+                                        <td>ETIS</td>
+                                        <td>2020-2021</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-muted small mt-2"><em>Collaboration: CY Cergy Paris Université (France) / Zhejiang University (China)</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="animate-fadeInUp text-center py-5 my-5" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(245, 158, 11, 0.05)); border-radius: var(--radius-xl);">
+                <h2 class="mb-3">View My Research</h2>
+                <p class="lead text-secondary mb-4">Explore my publications and research contributions</p>
+                <a href="publications-journals.html" class="btn btn-primary me-2">
+                    <i class="fas fa-book me-2"></i>Publications
+                </a>
+                <a href="research.html" class="btn btn-outline">
+                    <i class="fas fa-flask me-2"></i>Research Areas
+                </a>
+            </section>
+        </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h5 class="mb-2">Wassim Swaileh</h5>
+                <p class="mb-0">Data Scientist & AI Researcher</p>
+            </div>
+            <div class="text-lg-end">
+                <p>&copy; 2024 Wassim Swaileh. All rights reserved.</p>
+                <p class="mb-0">
+                    <a href="contact.html">Contact</a> | 
+                    <a href="https://github.com/swaileh" target="_blank">GitHub</a> | 
+                    <a href="https://www.linkedin.com/in/wassim-swaileh-3198bb65/" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
 </body>
 </html>

@@ -1,72 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research Areas - Wassim Swaileh's research in AI, Machine Learning, Computer Vision">
     <title>Research Areas - Wassim Swaileh</title>
+    
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Personal Page</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code me-2"></i>Wassim Swaileh
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="summary.html">Summary</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="research.html">Research Areas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="experience.html">Experience</a>
-                    </li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="summary.html"><i class="fas fa-user me-1"></i>Summary</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="research.html"><i class="fas fa-flask me-1"></i>Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html"><i class="fas fa-briefcase me-1"></i>Experience</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
-                        <ul class="dropdown-menu" aria-labelledby="publicationsDropdown">
-                            <li><a class="dropdown-item" href="publications-journals.html">International Journals</a></li>
-                            <li><a class="dropdown-item" href="publications-conferences.html">Conference Proceedings</a></li>
-                            <li><a class="dropdown-item" href="publications-national.html">National Journals</a></li>
-                            <li><a class="dropdown-item" href="phd-thesis.html">PhD Thesis</a></li>
-                            <li><a class="dropdown-item" href="presentations.html">Presentations</a></li>
-                            <li><a class="dropdown-item" href="submitted-articles.html">Submitted Articles</a></li>
-                            <li><a class="dropdown-item" href="tutorials.html">Tutorials</a></li>
+                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book me-1"></i>Publications
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="publications-journals.html"><i class="fas fa-journal-whills me-2"></i>International Journals</a></li>
+                            <li><a class="dropdown-item" href="publications-conferences.html"><i class="fas fa-users me-2"></i>Conference Proceedings</a></li>
+                            <li><a class="dropdown-item" href="publications-national.html"><i class="fas fa-flag me-2"></i>National Journals</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="phd-thesis.html"><i class="fas fa-graduation-cap me-2"></i>PhD Thesis</a></li>
+                            <li><a class="dropdown-item" href="presentations.html"><i class="fas fa-presentation me-2"></i>Presentations</a></li>
+                            <li><a class="dropdown-item" href="submitted-articles.html"><i class="fas fa-paper-plane me-2"></i>Submitted Articles</a></li>
+                            <li><a class="dropdown-item" href="tutorials.html"><i class="fas fa-chalkboard-teacher me-2"></i>Tutorials</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="awards.html">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="education.html">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                    <li class="nav-item"><a class="nav-link" href="awards.html"><i class="fas fa-trophy me-1"></i>Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html"><i class="fas fa-university me-1"></i>Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <div class="container mt-4">
-        <section id="research">
-            <h2>Research Areas</h2>
-            <ul>
-                <li>Visual Question Answering</li>
-                <li>Generative Diffusion Models</li>
-                <li>Pattern Recognition</li>
-                <li>Machine Learning of Sequential Statistical Models</li>
-                <li>Natural Language Processing</li>
-                <li>Document Analysis and 3D Modeling of Ancient Maps</li>
-            </ul>
-        </section>
+
+    <!-- Main Content -->
+    <div style="margin-top: 80px;">
+        <div class="container mt-4">
+            <!-- Page Header -->
+            <div class="scrolling-text mb-4">
+                <h3><i class="fas fa-flask me-2"></i>Research Areas</h3>
+            </div>
+
+            <!-- Introduction -->
+            <section class="animate-fadeInUp">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Research Philosophy</h4>
+                        <p class="lead">My research focuses on advancing the frontiers of artificial intelligence and machine learning, with particular emphasis on multimodal systems that can understand and process multiple types of data simultaneously.</p>
+                        <p>I am particularly interested in developing AI systems that can bridge the gap between visual perception and natural language understanding, enabling machines to comprehend and reason about the world in ways that are more aligned with human cognition.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Areas Grid -->
+            <section id="research-areas" class="animate-fadeInUp">
+                <h2><i class="fas fa-microscope me-2 text-primary"></i>Primary Research Areas</h2>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #2563eb, #3b82f6);">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <h4 class="card-title mb-0">Visual Question Answering</h4>
+                                </div>
+                                <p class="card-text">Developing AI systems capable of understanding images and answering natural language questions about their content. This involves combining computer vision and natural language processing to create more intuitive human-AI interfaces.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Computer Vision</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>NLP</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Multimodal AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+                                        <i class="fas fa-magic"></i>
+                                    </div>
+                                    <h4 class="card-title mb-0">Generative Diffusion Models</h4>
+                                </div>
+                                <p class="card-text">Researching state-of-the-art generative models for creating and manipulating visual content. These models have applications in image synthesis, editing, and creative AI tools.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Generative AI</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Deep Learning</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Image Synthesis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #10b981, #34d399);">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <h4 class="card-title mb-0">Pattern Recognition</h4>
+                                </div>
+                                <p class="card-text">Developing algorithms for recognizing complex patterns in structured and unstructured data. Applications include handwriting recognition, document analysis, and biometric identification systems.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Recognition</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Classification</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Deep Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h4 class="card-title mb-0">Sequential Statistical Models</h4>
+                                </div>
+                                <p class="card-text">Machine learning of sequential statistical models for time series analysis, trajectory reconstruction, and sequence prediction tasks. This includes work on handwriting trajectory reconstruction and motion analysis.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Time Series</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>LSTM</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>TCN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #ef4444, #f87171);">
+                                        <i class="fas fa-language"></i>
+                                    </div>
+                                    <h4 class="card-title mb-0">Natural Language Processing</h4>
+                                </div>
+                                <p class="card-text">Computational approaches to understanding, interpreting, and generating human language. Research includes language modeling, information extraction, and text analysis from historical documents.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>NLP</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Information Extraction</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Text Mining</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #06b6d4, #22d3ee);">
+                                        <i class="fas fa-map"></i>
+                                    </div>
+                                    <h4 class="card-title mb-0">Document Analysis & 3D Modeling</h4>
+                                </div>
+                                <p class="card-text">Advanced techniques for analyzing historical documents and creating 3D models of ancient maps and architectural plans. This work combines computer vision with digital humanities research.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Document Analysis</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>3D Modeling</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Digital Humanities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Current Projects -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-tasks me-2 text-primary"></i>Current Research Focus</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">Multimodal AI at Huawei RTC Finland</h4>
+                        <p class="card-subtitle mb-3">2023 - Present</p>
+                        <p>Leading cutting-edge research on multimodal language models and generative diffusion-based systems. Current work focuses on:</p>
+                        <ul class="custom-list">
+                            <li>Developing novel architectures for vision-language models</li>
+                            <li>Improving training efficiency and model performance</li>
+                            <li>Creating practical applications for industry deployment</li>
+                            <li>Exploring new approaches to memory-based vision-language models</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Publications CTA -->
+            <section class="animate-fadeInUp text-center py-5 my-5" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(245, 158, 11, 0.05)); border-radius: var(--radius-xl);">
+                <h2 class="mb-3">Explore My Publications</h2>
+                <p class="lead text-secondary mb-4">Discover the research outputs and contributions in these areas</p>
+                <a href="publications-journals.html" class="btn btn-primary me-2">
+                    <i class="fas fa-book me-2"></i>Journal Papers
+                </a>
+                <a href="publications-conferences.html" class="btn btn-outline">
+                    <i class="fas fa-users me-2"></i>Conference Papers
+                </a>
+            </section>
+        </div>
     </div>
-    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h5 class="mb-2">Wassim Swaileh</h5>
+                <p class="mb-0">Data Scientist & AI Researcher</p>
+            </div>
+            <div class="text-lg-end">
+                <p>&copy; 2024 Wassim Swaileh. All rights reserved.</p>
+                <p class="mb-0">
+                    <a href="contact.html">Contact</a> | 
+                    <a href="https://github.com/swaileh" target="_blank">GitHub</a> | 
+                    <a href="https://www.linkedin.com/in/wassim-swaileh-3198bb65/" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
 </body>
 </html>

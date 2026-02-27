@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Research Areas - Wassim Swaileh's research in AI, Machine Learning, Computer Vision">
+    <meta name="description" content="Research Areas - Wassim Swaileh's research in Multimodal AI, Video Understanding, Video Generation, Robotics">
     <title>Research Areas - Wassim Swaileh</title>
     
     <!-- Bootstrap CSS -->
@@ -73,8 +73,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Research Philosophy</h4>
-                        <p class="lead">My research focuses on advancing the frontiers of artificial intelligence and machine learning, with particular emphasis on multimodal systems that can understand and process multiple types of data simultaneously.</p>
-                        <p>I am particularly interested in developing AI systems that can bridge the gap between visual perception and natural language understanding, enabling machines to comprehend and reason about the world in ways that are more aligned with human cognition.</p>
+                        <p class="lead">My research focuses on advancing multimodal artificial intelligence systems that can understand, generate, and interact with complex real-world data across video, language, and 3D spaces.</p>
+                        <p>I am particularly interested in developing AI systems for <strong>video understanding</strong> and <strong>video generation</strong>, bridging the gap between visual perception and language understanding through state-of-the-art Vision-Language Models (VLMs).</p>
                     </div>
                 </div>
             </section>
@@ -83,6 +83,46 @@
             <section id="research-areas" class="animate-fadeInUp">
                 <h2><i class="fas fa-microscope me-2 text-primary"></i>Primary Research Areas</h2>
                 <div class="row g-4">
+                    <!-- Video Understanding -->
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #dc2626, #ef4444);">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="card-title mb-0">Video Understanding</h4>
+                                        <span class="badge badge-success"><i class="fas fa-award me-1"></i>CVPR 2025</span>
+                                    </div>
+                                </div>
+                                <p class="card-text">Developing AI systems for long video analysis with instructed learnable memory. Our <strong>ReWind</strong> model (CVPR 2025) enables comprehensive understanding of extended video content through novel memory mechanisms.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Long Video Analysis</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Memory Models</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Temporal Reasoning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Generation -->
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+                                        <i class="fas fa-film"></i>
+                                    </div>
+                                    <h4 class="card-title mb-0">Video Generation</h4>
+                                </div>
+                                <p class="card-text">Building production-scale video generation models using Vision-Language Models and diffusion architectures. Focus on controllable generation and high-quality synthetic video production.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Diffusion Models</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>VLMs</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Generative AI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vision-Language Models -->
                     <div class="col-lg-6">
                         <div class="card h-100">
                             <div class="card-body">
@@ -90,92 +130,106 @@
                                     <div class="award-icon me-3" style="background: linear-gradient(135deg, #2563eb, #3b82f6);">
                                         <i class="fas fa-eye"></i>
                                     </div>
-                                    <h4 class="card-title mb-0">Visual Question Answering</h4>
+                                    <h4 class="card-title mb-0">Vision-Language Models</h4>
                                 </div>
-                                <p class="card-text">Developing AI systems capable of understanding images and answering natural language questions about their content. This involves combining computer vision and natural language processing to create more intuitive human-AI interfaces.</p>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>Computer Vision</span>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>NLP</span>
+                                <p class="card-text">Expertise in state-of-the-art VLMs including LLaVA, CLIP, QwenVL, and LayoutVLM. Developing multimodal perception systems that bridge vision and language understanding.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>LLaVA</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>CLIP</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>QwenVL</span>
                                 <span class="badge"><i class="fas fa-tag me-1"></i>Multimodal AI</span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Autonomous Systems & LiDAR -->
                     <div class="col-lg-6">
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
-                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #059669, #10b981);">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="card-title mb-0">Autonomous Systems & 4D LiDAR</h4>
+                                        <span class="badge badge-warning"><i class="fas fa-paper-plane me-1"></i>ECCV 2026 Submitted</span>
+                                    </div>
+                                </div>
+                                <p class="card-text">Research on <strong>OmniLiDAR: Controllable and Multi-Sensor 4D LiDAR Generation</strong> (submitted to ECCV 2026). Focus on 3D scene reconstruction, sensor fusion, and autonomous perception systems.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>4D LiDAR</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Sensor Fusion</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>3D Reconstruction</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vision-Language-Action -->
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #ea580c, #fb923c);">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <h4 class="card-title mb-0">Vision-Language-Action (VLA)</h4>
+                                </div>
+                                <p class="card-text">Developing models that combine visual perception, language understanding, and action prediction for robotics and autonomous systems. Enabling AI systems to understand and execute complex instructions.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Robotics</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Action Prediction</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Embodied AI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generative Diffusion -->
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #0891b2, #22d3ee);">
                                         <i class="fas fa-magic"></i>
                                     </div>
                                     <h4 class="card-title mb-0">Generative Diffusion Models</h4>
                                 </div>
-                                <p class="card-text">Researching state-of-the-art generative models for creating and manipulating visual content. These models have applications in image synthesis, editing, and creative AI tools.</p>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>Generative AI</span>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>Deep Learning</span>
+                                <p class="card-text">Researching state-of-the-art diffusion models for creating and manipulating visual content. Applications in image synthesis, video generation, and creative AI tools.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Diffusion</span>
                                 <span class="badge"><i class="fas fa-tag me-1"></i>Image Synthesis</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Generative AI</span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Kinematic Analysis -->
                     <div class="col-lg-6">
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
-                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #10b981, #34d399);">
-                                        <i class="fas fa-project-diagram"></i>
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #7c3aed, #a78bfa);">
+                                        <i class="fas fa-wave-square"></i>
                                     </div>
-                                    <h4 class="card-title mb-0">Pattern Recognition</h4>
+                                    <h4 class="card-title mb-0">Kinematic Time Series</h4>
                                 </div>
-                                <p class="card-text">Developing algorithms for recognizing complex patterns in structured and unstructured data. Applications include handwriting recognition, document analysis, and biometric identification systems.</p>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>Recognition</span>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>Classification</span>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>Deep Learning</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
-                                        <i class="fas fa-chart-line"></i>
-                                    </div>
-                                    <h4 class="card-title mb-0">Sequential Statistical Models</h4>
-                                </div>
-                                <p class="card-text">Machine learning of sequential statistical models for time series analysis, trajectory reconstruction, and sequence prediction tasks. This includes work on handwriting trajectory reconstruction and motion analysis.</p>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>Time Series</span>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>LSTM</span>
+                                <p class="card-text">Deep learning for motion sensor data analysis and trajectory reconstruction using Temporal Convolutional Networks (TCNs). Applications in pen trajectory reconstruction and motion analysis.</p>
                                 <span class="badge"><i class="fas fa-tag me-1"></i>TCN</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Time Series</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Sensor Fusion</span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Document AI -->
                     <div class="col-lg-6">
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
-                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #ef4444, #f87171);">
-                                        <i class="fas fa-language"></i>
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #be123c, #fb7185);">
+                                        <i class="fas fa-file-alt"></i>
                                     </div>
-                                    <h4 class="card-title mb-0">Natural Language Processing</h4>
+                                    <h4 class="card-title mb-0">Document AI & OCR</h4>
                                 </div>
-                                <p class="card-text">Computational approaches to understanding, interpreting, and generating human language. Research includes language modeling, information extraction, and text analysis from historical documents.</p>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>NLP</span>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>Information Extraction</span>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>Text Mining</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #06b6d4, #22d3ee);">
-                                        <i class="fas fa-map"></i>
-                                    </div>
-                                    <h4 class="card-title mb-0">Document Analysis & 3D Modeling</h4>
-                                </div>
-                                <p class="card-text">Advanced techniques for analyzing historical documents and creating 3D models of ancient maps and architectural plans. This work combines computer vision with digital humanities research.</p>
+                                <p class="card-text">Multimodal perception models for document analysis, handwriting recognition, and historical document processing. Deploying OCR capabilities across multiple languages.</p>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>OCR</span>
+                                <span class="badge"><i class="fas fa-tag me-1"></i>Handwriting</span>
                                 <span class="badge"><i class="fas fa-tag me-1"></i>Document Analysis</span>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>3D Modeling</span>
-                                <span class="badge"><i class="fas fa-tag me-1"></i>Digital Humanities</span>
                             </div>
                         </div>
                     </div>
@@ -187,14 +241,14 @@
                 <h2><i class="fas fa-tasks me-2 text-primary"></i>Current Research Focus</h2>
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title text-primary">Multimodal AI at Huawei RTC Finland</h4>
+                        <h4 class="card-title text-primary">Multimodal AI at Huawei Finland Research Center</h4>
                         <p class="card-subtitle mb-3">2023 - Present</p>
-                        <p>Leading cutting-edge research on multimodal language models and generative diffusion-based systems. Current work focuses on:</p>
+                        <p>Leading cutting-edge research on multimodal AI systems with focus on:</p>
                         <ul class="custom-list">
-                            <li>Developing novel architectures for vision-language models</li>
-                            <li>Improving training efficiency and model performance</li>
-                            <li>Creating practical applications for industry deployment</li>
-                            <li>Exploring new approaches to memory-based vision-language models</li>
+                            <li><strong>Video Understanding:</strong> Co-developed ReWind (CVPR 2025), a large language model for long video understanding with instructed learnable memory</li>
+                            <li><strong>Video Generation:</strong> Building production-scale video generation models using VLMs and diffusion architectures on ModelArts MLOps platform</li>
+                            <li><strong>OCR & Multimodal Perception:</strong> Spearheading OCR capabilities, deploying multimodal perception models across multiple languages</li>
+                            <li><strong>4D LiDAR Generation:</strong> OmniLiDAR project on controllable and multi-sensor 4D LiDAR generation (submitted to ECCV 2026)</li>
                         </ul>
                     </div>
                 </div>
@@ -204,11 +258,11 @@
             <section class="animate-fadeInUp text-center py-5 my-5" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(245, 158, 11, 0.05)); border-radius: var(--radius-xl);">
                 <h2 class="mb-3">Explore My Publications</h2>
                 <p class="lead text-secondary mb-4">Discover the research outputs and contributions in these areas</p>
-                <a href="publications-journals.html" class="btn btn-primary me-2">
-                    <i class="fas fa-book me-2"></i>Journal Papers
+                <a href="publications-conferences.html" class="btn btn-primary me-2">
+                    <i class="fas fa-book me-2"></i>Conference Papers
                 </a>
-                <a href="publications-conferences.html" class="btn btn-outline">
-                    <i class="fas fa-users me-2"></i>Conference Papers
+                <a href="publications-journals.html" class="btn btn-outline">
+                    <i class="fas fa-journal-whills me-2"></i>Journal Papers
                 </a>
             </section>
         </div>
@@ -218,8 +272,8 @@
     <footer class="footer">
         <div class="footer-content">
             <div>
-                <h5 class="mb-2">Wassim Swaileh</h5>
-                <p class="mb-0">Data Scientist & AI Researcher</p>
+                <h5 class="mb-2">Wassim Swaileh, PhD</h5>
+                <p class="mb-0">AI Engineer & Multimodal AI Researcher</p>
             </div>
             <div class="text-lg-end">
                 <p>&copy; 2024 Wassim Swaileh. All rights reserved.</p>

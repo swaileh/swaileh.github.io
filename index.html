@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wassim Swaileh - Data Scientist, PhD in Computer Science, Researcher in AI and Machine Learning">
-    <meta name="keywords" content="Wassim Swaileh, Data Scientist, Machine Learning, AI, Computer Science, Research">
+    <meta name="description" content="Wassim Swaileh - AI Engineer, PhD in Computer Science, Researcher in Multimodal AI, Video Understanding, and Robotics">
+    <meta name="keywords" content="Wassim Swaileh, AI Engineer, Multimodal AI, Video Understanding, Computer Vision, Machine Learning, ReWind, CVPR">
     <meta name="author" content="Wassim Swaileh">
-    <title>Wassim Swaileh - Data Scientist & AI Researcher</title>
+    <title>Wassim Swaileh - AI Engineer & Multimodal AI Researcher</title>
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
@@ -18,6 +18,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Enhanced Profile Image Styling */
+        .profile-pic-main {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .profile-pic-main:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+        @media (max-width: 768px) {
+            .profile-pic-main {
+                width: 160px;
+                height: 160px;
+            }
+        }
+        /* Enhanced Hero Stats */
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .hero-stat-item {
+            text-align: center;
+        }
+        .hero-stat-item h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 0.25rem;
+            -webkit-text-fill-color: white;
+        }
+        .hero-stat-item p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.875rem;
+            margin: 0;
+        }
+        /* Publication Highlight Banner */
+        .pub-banner {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(37, 99, 235, 0.1));
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+        }
+        .pub-banner h5 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -80,27 +135,50 @@
     <!-- Main Content -->
     <div style="margin-top: 80px;">
         <div class="container mt-4">
+            <!-- CVPR Paper Banner -->
+            <div class="pub-banner animate-fadeInUp">
+                <h5><i class="fas fa-award me-2"></i>CVPR 2025 Publication</h5>
+                <p class="mb-0"><strong>ReWind:</strong> Understanding Long Videos with Instructed Learnable Memory - <a href="https://cvpr.thecvf.com/virtual/2025/poster/35002" target="_blank">View Paper <i class="fas fa-external-link-alt ms-1"></i></a></p>
+            </div>
+
             <!-- Hero Section -->
             <section class="hero animate-fadeInUp">
                 <div class="hero-content">
                     <div class="row align-items-center">
                         <div class="col-lg-8">
                             <span class="badge bg-white text-primary mb-3">
-                                <i class="fas fa-robot me-2"></i>AI Researcher & Data Scientist
+                                <i class="fas fa-robot me-2"></i>AI Engineer & Multimodal AI Researcher
                             </span>
                             <h1>Hello, I'm Wassim Swaileh</h1>
-                            <p class="lead">PhD in Computer Science specializing in Machine Learning, Visual Question Answering, and Generative AI. Passionate about pushing the boundaries of artificial intelligence.</p>
+                            <p class="lead">PhD in Computer Science with 8+ years post-PhD experience building production AI models and training pipelines for multimodal and autonomous systems. Expertise in VLMs, video understanding, video generation, and robotics.</p>
+                            
+                            <!-- Hero Stats -->
+                            <div class="hero-stats">
+                                <div class="hero-stat-item">
+                                    <h3>8+</h3>
+                                    <p>Years Experience</p>
+                                </div>
+                                <div class="hero-stat-item">
+                                    <h3>CVPR</h3>
+                                    <p>Tier-1 Conference</p>
+                                </div>
+                                <div class="hero-stat-item">
+                                    <h3>15+</h3>
+                                    <p>Publications</p>
+                                </div>
+                            </div>
+
                             <div class="d-flex gap-3 flex-wrap mt-4">
                                 <a href="research.html" class="btn btn-primary">
                                     <i class="fas fa-flask me-2"></i>View Research
                                 </a>
-                                <a href="publications-journals.html" class="btn btn-outline-light">
+                                <a href="publications-conferences.html" class="btn btn-outline-light">
                                     <i class="fas fa-book me-2"></i>Publications
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                            <img src="profile-pic.jpg" alt="Wassim Swaileh" class="profile-pic" style="width: 200px; height: 200px; border: 5px solid rgba(255,255,255,0.3);">
+                            <img src="profile-pic.jpg" alt="Wassim Swaileh" class="profile-pic-main">
                         </div>
                     </div>
                 </div>
@@ -111,26 +189,30 @@
                 <h2><i class="fas fa-user-circle me-2 text-primary"></i>About Me</h2>
                 <div class="row">
                     <div class="col-lg-8">
-                        <p class="lead">I am an accomplished <strong>Data Scientist</strong> with a <strong>PhD in Computer Science</strong>, specializing in Machine Learning and Artificial Intelligence.</p>
+                        <p class="lead">I am an <strong>AI Engineer</strong> with a <strong>PhD in Computer Science</strong>, specializing in building production AI models and training pipelines for multimodal and autonomous systems.</p>
                         <p>My extensive experience spans several cutting-edge domains, including:</p>
                         <ul class="custom-list">
-                            <li>Multimodal language models</li>
-                            <li>Generative diffusion models</li>
-                            <li>Trajectory reconstruction</li>
-                            <li>Information extraction</li>
-                            <li>Language modeling</li>
-                            <li>Visual Question Answering</li>
+                            <li>Video Understanding & Long Video Analysis (ReWind - CVPR 2025)</li>
+                            <li>Video Generation using VLMs and Diffusion Architectures</li>
+                            <li>Vision-Language Models (LLaVA, CLIP, QwenVL, LayoutVLM)</li>
+                            <li>Vision-Language-Action (VLA) Models</li>
+                            <li>4D LiDAR Generation & Autonomous Systems</li>
+                            <li>Generative Diffusion Models</li>
+                            <li>3D Scene Reconstruction</li>
+                            <li>Kinematic Time Series Analysis</li>
                         </ul>
-                        <p>Throughout my career, I have held reputable research and academic positions at esteemed institutions such as the <strong>University of Rouen Normandy</strong>, <strong>INSA Rennes</strong>, <strong>CY Cergy Paris Université</strong>, and <strong>Huawei RTC Finland</strong>.</p>
+                        <p>I currently work at <strong>Huawei Suomi Finland Research Center</strong> as a Senior Researcher in Multimodal AI, where I build and ship production-scale video generation models and co-developed the <strong>ReWind</strong> model for long video understanding (CVPR 2025).</p>
                     </div>
                     <div class="col-lg-4">
                         <div class="card h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-briefcase fa-3x text-primary mb-3"></i>
                                 <h4 class="card-title">Current Position</h4>
-                                <p class="card-subtitle">Principal Senior Researcher</p>
-                                <p class="card-text">Huawei RTC Finland</p>
+                                <p class="card-subtitle">Senior Researcher - Multimodal AI</p>
+                                <p class="card-text">Huawei Suomi Finland Research Center</p>
                                 <span class="badge badge-success">2023 - Present</span>
+                                <hr>
+                                <p class="small text-muted mb-0"><i class="fas fa-map-marker-alt me-1"></i>Helsinki, Finland</p>
                             </div>
                         </div>
                     </div>
@@ -142,34 +224,34 @@
                 <h2><i class="fas fa-microscope me-2 text-primary"></i>Research Areas</h2>
                 <div class="research-grid stagger-list">
                     <div class="research-card">
+                        <i class="fas fa-video"></i>
+                        <h4>Video Understanding</h4>
+                        <p>Long video analysis with instructed learnable memory (ReWind - CVPR 2025)</p>
+                    </div>
+                    <div class="research-card">
+                        <i class="fas fa-film"></i>
+                        <h4>Video Generation</h4>
+                        <p>Production-scale video generation using VLMs and diffusion architectures</p>
+                    </div>
+                    <div class="research-card">
                         <i class="fas fa-eye"></i>
-                        <h4>Visual Question Answering</h4>
-                        <p>Developing AI systems that can understand and answer questions about visual content</p>
+                        <h4>Vision-Language Models</h4>
+                        <p>LLaVA, CLIP, QwenVL, LayoutVLM for multimodal perception</p>
+                    </div>
+                    <div class="research-card">
+                        <i class="fas fa-car"></i>
+                        <h4>Autonomous Systems</h4>
+                        <p>4D LiDAR generation, sensor fusion, and 3D scene reconstruction</p>
                     </div>
                     <div class="research-card">
                         <i class="fas fa-magic"></i>
-                        <h4>Generative Diffusion Models</h4>
+                        <h4>Generative Diffusion</h4>
                         <p>Advanced generative AI for creating and manipulating visual content</p>
                     </div>
                     <div class="research-card">
-                        <i class="fas fa-project-diagram"></i>
-                        <h4>Pattern Recognition</h4>
-                        <p>Machine learning algorithms for recognizing complex patterns in data</p>
-                    </div>
-                    <div class="research-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>Sequential Models</h4>
-                        <p>Deep learning for time series and sequential data analysis</p>
-                    </div>
-                    <div class="research-card">
-                        <i class="fas fa-language"></i>
-                        <h4>Natural Language Processing</h4>
-                        <p>Computational approaches to understanding human language</p>
-                    </div>
-                    <div class="research-card">
-                        <i class="fas fa-map"></i>
-                        <h4>Document Analysis</h4>
-                        <p>3D modeling and analysis of ancient maps and historical documents</p>
+                        <i class="fas fa-wave-square"></i>
+                        <h4>Kinematic Analysis</h4>
+                        <p>Time series analysis for motion and trajectory reconstruction</p>
                     </div>
                 </div>
                 <div class="text-center mt-4">
@@ -180,6 +262,20 @@
             <!-- Featured Publications -->
             <section id="publications" class="animate-fadeInUp">
                 <h2><i class="fas fa-star me-2 text-primary"></i>Featured Publications</h2>
+                
+                <!-- CVPR 2025 Highlight -->
+                <div class="publication-item" style="border-left: 4px solid var(--accent-color);">
+                    <span class="publication-year" style="background: var(--accent-color);">2025</span>
+                    <span class="badge badge-success ms-2"><i class="fas fa-award me-1"></i>CVPR</span>
+                    <div class="publication-title mt-2">
+                        <a href="https://cvpr.thecvf.com/virtual/2025/poster/35002" target="_blank">
+                            "ReWind: Understanding Long Videos with Instructed Learnable Memory"
+                        </a>
+                    </div>
+                    <div class="publication-authors">A. Diko, T. Wang, <strong>W. Swaileh</strong>, S. Sun, Y. Patras</div>
+                    <div class="publication-venue">Computer Vision and Pattern Recognition Conference (CVPR 2025)</div>
+                </div>
+
                 <div class="publication-item">
                     <span class="publication-year">2023</span>
                     <div class="publication-title">
@@ -190,6 +286,7 @@
                     <div class="publication-authors">W. Swaileh, F. Imbert, Y. Soullard, R. Tavenard, E. Anquetil</div>
                     <div class="publication-venue">International Journal on Document Analysis and Recognition (IJDAR)</div>
                 </div>
+
                 <div class="publication-item">
                     <span class="publication-year">2023</span>
                     <div class="publication-title">
@@ -200,18 +297,9 @@
                     <div class="publication-authors">X. Liang, Y. Qian, J. Huang, X. Ling, B. Wang, C. Wu, W. Swaileh</div>
                     <div class="publication-venue">Pattern Recognition Letters</div>
                 </div>
-                <div class="publication-item">
-                    <span class="publication-year">2022</span>
-                    <div class="publication-title">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-06555-2_42" target="_blank">
-                            "3D Modeling Approach for Ancient Floor Plans' Quick Browsing"
-                        </a>
-                    </div>
-                    <div class="publication-authors">W. Swaileh, M. Jordan, D. Kotzinos</div>
-                    <div class="publication-venue">The 15th International Workshop on Document Analysis Systems (DAS 2022)</div>
-                </div>
+
                 <div class="text-center mt-4">
-                    <a href="publications-journals.html" class="btn btn-outline">View All Publications</a>
+                    <a href="publications-conferences.html" class="btn btn-outline">View All Publications</a>
                 </div>
             </section>
 
@@ -232,25 +320,25 @@
                         <div class="card text-center">
                             <div class="card-body">
                                 <i class="fas fa-award fa-2x text-accent mb-2"></i>
-                                <h3 class="mb-0">1</h3>
-                                <p class="mb-0 text-secondary">Best Paper Award</p>
+                                <h3 class="mb-0">CVPR</h3>
+                                <p class="mb-0 text-secondary">Tier-1 Conference</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
                         <div class="card text-center">
                             <div class="card-body">
-                                <i class="fas fa-users fa-2x text-primary mb-2"></i>
-                                <h3 class="mb-0">3</h3>
-                                <p class="mb-0 text-secondary">Students Supervised</p>
+                                <i class="fas fa-lightbulb fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">Patent</h3>
+                                <p class="mb-0 text-secondary">Submitted</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
                         <div class="card text-center">
                             <div class="card-body">
-                                <i class="fas fa-building fa-2x text-accent mb-2"></i>
-                                <h3 class="mb-0">10+</h3>
+                                <i class="fas fa-briefcase fa-2x text-accent mb-2"></i>
+                                <h3 class="mb-0">8+</h3>
                                 <p class="mb-0 text-secondary">Years Experience</p>
                             </div>
                         </div>
@@ -284,8 +372,8 @@
     <footer class="footer">
         <div class="footer-content">
             <div>
-                <h5 class="mb-2">Wassim Swaileh</h5>
-                <p class="mb-0">Data Scientist & AI Researcher</p>
+                <h5 class="mb-2">Wassim Swaileh, PhD</h5>
+                <p class="mb-0">AI Engineer & Multimodal AI Researcher</p>
             </div>
             <div class="text-lg-end">
                 <p>&copy; 2024 Wassim Swaileh. All rights reserved.</p>
@@ -313,7 +401,6 @@
         const themeIcon = document.getElementById('themeIcon');
         const html = document.documentElement;
         
-        // Check for saved theme preference
         const savedTheme = localStorage.getItem('theme') || 'light';
         html.setAttribute('data-theme', savedTheme);
         updateThemeIcon(savedTheme);

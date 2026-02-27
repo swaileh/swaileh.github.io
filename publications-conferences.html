@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conference Proceedings Publications - Wassim Swaileh">
+    <meta name="description" content="Conference Proceedings Publications - Wassim Swaileh, including CVPR 2025 ReWind">
     <title>Conference Proceedings - Wassim Swaileh</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
@@ -11,6 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .highlight-paper {
+            border-left: 4px solid var(--accent-color) !important;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(37, 99, 235, 0.05));
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -57,49 +63,83 @@
 
             <section class="animate-fadeInUp">
                 <div class="row g-4 mb-4">
-                    <div class="col-md-4">
+                    <div class="col-md-3 col-6">
                         <div class="card text-center h-100">
                             <div class="card-body">
                                 <i class="fas fa-users fa-2x text-primary mb-2"></i>
-                                <h3 class="mb-0">7+</h3>
+                                <h3 class="mb-0">8+</h3>
                                 <p class="text-secondary mb-0">Conference Papers</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3 col-6">
                         <div class="card text-center h-100">
                             <div class="card-body">
-                                <i class="fas fa-globe fa-2x text-primary mb-2"></i>
-                                <h3 class="mb-0">ICDAR/DAS</h3>
-                                <p class="text-secondary mb-0">Top Venues</p>
+                                <i class="fas fa-trophy fa-2x text-accent mb-2"></i>
+                                <h3 class="mb-0">CVPR</h3>
+                                <p class="text-secondary mb-0">2025</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3 col-6">
                         <div class="card text-center h-100">
                             <div class="card-body">
-                                <i class="fas fa-award fa-2x text-primary mb-2"></i>
-                                <h3 class="mb-0">CVPR</h3>
-                                <p class="text-secondary mb-0">Tier-1 Conference</p>
+                                <i class="fas fa-globe fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">ICDAR</h3>
+                                <p class="text-secondary mb-0">DAS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-paper-plane fa-2x text-warning mb-2"></i>
+                                <h3 class="mb-0">ECCV</h3>
+                                <p class="text-secondary mb-0">2026 Submitted</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- CVPR 2025 - Featured -->
             <section class="animate-fadeInUp">
                 <h2><i class="fas fa-calendar me-2 text-primary"></i>2025</h2>
-                <div class="publication-item">
-                    <span class="publication-year">2025</span>
-                    <div class="publication-title">
+                <div class="publication-item highlight-paper">
+                    <span class="publication-year" style="background: var(--accent-color);">2025</span>
+                    <span class="badge badge-success ms-2"><i class="fas fa-award me-1"></i>CVPR</span>
+                    <span class="badge ms-2" style="background: #dc2626;"><i class="fas fa-star me-1"></i>Tier-1</span>
+                    <div class="publication-title mt-2">
                         <a href="https://cvpr.thecvf.com/virtual/2025/poster/35002" target="_blank">
                             <i class="fas fa-external-link-alt me-2"></i>"ReWind: Understanding Long Videos with Instructed Learnable Memory"
                         </a>
                     </div>
-                    <div class="publication-authors">A. Diko, T. Wang, W. Swaileh, S. Sun, Y. Patras</div>
-                    <div class="publication-venue">Computer Vision and Pattern Recognition Conference (CVPR 2025)</div>
-                    <span class="badge badge-success mt-2"><i class="fas fa-star me-1"></i>Tier-1 Conference</span>
-                    <span class="badge mt-2"><i class="fas fa-tag me-1"></i>Computer Vision</span>
+                    <div class="publication-authors">A. Diko, T. Wang, <strong>W. Swaileh</strong>, S. Sun, Y. Patras</div>
+                    <div class="publication-venue">Computer Vision and Pattern Recognition Conference (CVPR 2025) - pp. 13734-13743</div>
+                    <p class="mt-2 text-secondary"><i class="fas fa-info-circle me-1"></i>A large language model for long video understanding with instructed learnable memory.</p>
+                    <span class="badge mt-2"><i class="fas fa-tag me-1"></i>Video Understanding</span>
+                    <span class="badge mt-2"><i class="fas fa-tag me-1"></i>Long Video</span>
+                    <span class="badge mt-2"><i class="fas fa-tag me-1"></i>Memory Models</span>
+                    <span class="badge mt-2"><i class="fas fa-tag me-1"></i>VLM</span>
+                </div>
+            </section>
+
+            <!-- ECCV 2026 Submitted -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-calendar me-2 text-primary"></i>2026 (Submitted)</h2>
+                <div class="publication-item" style="border-left: 4px solid var(--warning-color, #f59e0b);">
+                    <span class="publication-year" style="background: #f59e0b;">2026</span>
+                    <span class="badge badge-warning ms-2"><i class="fas fa-paper-plane me-1"></i>Submitted</span>
+                    <div class="publication-title mt-2">
+                        <span style="color: var(--text-primary); font-weight: 600;">"OmniLiDAR: Controllable and Multi-Sensor 4D LiDAR Generation"</span>
+                    </div>
+                    <div class="publication-authors"><strong>W. Swaileh</strong> et al.</div>
+                    <div class="publication-venue">European Conference on Computer Vision (ECCV 2026) - Under Review</div>
+                    <p class="mt-2 text-secondary"><i class="fas fa-info-circle me-1"></i>Novel approach to controllable 4D LiDAR generation using multi-sensor fusion for autonomous systems.</p>
+                    <span class="badge mt-2"><i class="fas fa-tag me-1"></i>4D LiDAR</span>
+                    <span class="badge mt-2"><i class="fas fa-tag me-1"></i>Autonomous Systems</span>
+                    <span class="badge mt-2"><i class="fas fa-tag me-1"></i>Sensor Fusion</span>
+                    <span class="badge mt-2"><i class="fas fa-tag me-1"></i>3D Generation</span>
                 </div>
             </section>
 
@@ -211,7 +251,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <div><h5 class="mb-2">Wassim Swaileh</h5><p class="mb-0">Data Scientist & AI Researcher</p></div>
+            <div><h5 class="mb-2">Wassim Swaileh, PhD</h5><p class="mb-0">AI Engineer & Multimodal AI Researcher</p></div>
             <div class="text-lg-end">
                 <p>&copy; 2024 Wassim Swaileh. All rights reserved.</p>
                 <p class="mb-0"><a href="contact.html">Contact</a> | <a href="https://github.com/swaileh" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/wassim-swaileh-3198bb65/" target="_blank">LinkedIn</a></p>

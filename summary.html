@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Summary - Wassim Swaileh">
+    <meta name="description" content="Professional Summary - Wassim Swaileh, AI Engineer & Multimodal AI Researcher">
     <title>Summary - Wassim Swaileh</title>
     
     <!-- Bootstrap CSS -->
@@ -15,6 +15,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Enhanced Profile Image Styling */
+        .profile-pic-summary {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--bg-primary);
+            box-shadow: var(--shadow-xl);
+            transition: all 0.3s ease;
+        }
+        .profile-pic-summary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 4px var(--primary-color), var(--shadow-xl);
+        }
+        @media (max-width: 768px) {
+            .profile-pic-summary {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -70,15 +92,26 @@
 
             <!-- Profile Section -->
             <section class="animate-fadeInUp">
-                <div class="profile-section">
-                    <img src="profile-pic.jpg" alt="Wassim Swaileh" class="profile-pic">
-                    <div class="profile-info">
-                        <h1>Wassim Swaileh</h1>
-                        <p class="title">Data Scientist | PhD in Computer Science | Researcher in AI and Machine Learning</p>
-                        <div class="contact-info">
+                <div class="profile-section" style="flex-direction: column; text-align: center;">
+                    <img src="profile-pic.jpg" alt="Wassim Swaileh" class="profile-pic-summary mb-4">
+                    <div class="profile-info text-center">
+                        <h1>Wassim Swaileh, PhD</h1>
+                        <p class="title">AI Engineer -- Robotics, Autonomous Systems & Multimodal AI</p>
+                        <div class="contact-info justify-content-center">
                             <a href="mailto:swaileh@hotmail.com"><i class="fas fa-envelope"></i> swaileh@hotmail.com</a>
                             <a href="tel:+358401853001"><i class="fas fa-phone"></i> +358 40 185 3001</a>
-                            <span><i class="fas fa-map-marker-alt"></i> Finland</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Helsinki, Finland</span>
+                        </div>
+                        <div class="social-media justify-content-center mt-3">
+                            <a href="https://www.linkedin.com/in/wassim-swaileh-3198bb65/" target="_blank">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/swaileh" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=sA77if8AAAAJ" target="_blank">
+                                <i class="fas fa-graduation-cap"></i> Scholar
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -89,27 +122,35 @@
                 <h2><i class="fas fa-info-circle me-2 text-primary"></i>About Me</h2>
                 <div class="card">
                     <div class="card-body">
-                        <p class="lead">I am an accomplished <strong>Data Scientist</strong> with a <strong>PhD in Computer Science</strong>, specializing in Machine Learning. My extensive experience spans several cutting-edge domains, including multimodal language models, generative diffusion models, trajectory reconstruction, information extraction, and language modeling.</p>
+                        <p class="lead">AI Engineer with <strong>8+ years post-PhD experience</strong> building production AI models and training pipelines for multimodal and autonomous systems. Expertise in VLMs, vision-language-action models, 3D scene reconstruction, and large-scale ML infrastructure.</p>
                         
-                        <p>Leveraging my expertise, I have contributed to significant advancements in:</p>
+                        <p>Currently working at <strong>Huawei Suomi Finland Research Center</strong> as a Senior Researcher in Multimodal AI, where I:</p>
+                        <ul class="custom-list">
+                            <li>Build and ship production-scale video generation models using VLMs and diffusion architectures</li>
+                            <li>Design end-to-end training pipelines with containerized environments on ModelArts MLOps platform</li>
+                            <li>Co-developed <strong>ReWind (CVPR 2025)</strong>, a large language model for long video understanding</li>
+                            <li>Spearhead OCR capabilities, deploying multimodal perception models across multiple languages</li>
+                        </ul>
+                        
+                        <p>My research spans:</p>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="custom-list">
-                                    <li>Visual Question Answering</li>
-                                    <li>Pattern Recognition</li>
-                                    <li>Natural Language Processing</li>
+                                    <li>Video Understanding & Generation</li>
+                                    <li>Vision-Language Models (LLaVA, CLIP, QwenVL)</li>
+                                    <li>Vision-Language-Action (VLA) Models</li>
+                                    <li>Generative Diffusion Models</li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
                                 <ul class="custom-list">
-                                    <li>Document Analysis</li>
-                                    <li>Deep Learning Systems</li>
-                                    <li>AI Model Development</li>
+                                    <li>4D LiDAR Generation & Autonomous Systems</li>
+                                    <li>3D Scene Reconstruction</li>
+                                    <li>Kinematic Time Series Analysis</li>
+                                    <li>Document AI & OCR</li>
                                 </ul>
                             </div>
                         </div>
-                        
-                        <p>Throughout my career, I have held reputable research and academic positions at esteemed institutions such as the <strong>University of Rouen Normandy</strong>, <strong>INSA Rennes</strong>, <strong>CY Cergy Paris Université</strong>, and <strong>Huawei RTC Finland</strong>. My work is driven by a passion for innovative solutions and a commitment to advancing the field of machine learning and data science.</p>
                     </div>
                 </div>
             </section>
@@ -121,9 +162,9 @@
                     <div class="col-md-4">
                         <div class="card h-100 text-center">
                             <div class="card-body">
-                                <i class="fas fa-robot fa-3x text-primary mb-3"></i>
-                                <h4 class="card-title">Machine Learning</h4>
-                                <p class="card-text">Deep expertise in developing and deploying ML models for complex real-world problems</p>
+                                <i class="fas fa-video fa-3x text-primary mb-3"></i>
+                                <h4 class="card-title">Video AI</h4>
+                                <p class="card-text">Video understanding, generation, and long video analysis with memory models</p>
                             </div>
                         </div>
                     </div>
@@ -131,17 +172,17 @@
                         <div class="card h-100 text-center">
                             <div class="card-body">
                                 <i class="fas fa-eye fa-3x text-primary mb-3"></i>
-                                <h4 class="card-title">Computer Vision</h4>
-                                <p class="card-text">Visual Question Answering, image analysis, and document processing systems</p>
+                                <h4 class="card-title">Multimodal AI</h4>
+                                <p class="card-text">VLMs, VLA models, and multimodal perception systems</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100 text-center">
                             <div class="card-body">
-                                <i class="fas fa-language fa-3x text-primary mb-3"></i>
-                                <h4 class="card-title">NLP</h4>
-                                <p class="card-text">Natural language processing, text analysis, and language modeling</p>
+                                <i class="fas fa-car fa-3x text-primary mb-3"></i>
+                                <h4 class="card-title">Autonomous Systems</h4>
+                                <p class="card-text">4D LiDAR generation, sensor fusion, and 3D reconstruction</p>
                             </div>
                         </div>
                     </div>
@@ -154,27 +195,66 @@
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">2023 - Present</div>
-                        <div class="timeline-title">Principal Senior Researcher</div>
-                        <div class="timeline-company">Huawei RTC Finland</div>
-                        <p class="mt-2">Leading research on multimodal AI models and generative diffusion-based systems</p>
+                        <div class="timeline-title">Senior Researcher - Multimodal AI</div>
+                        <div class="timeline-company">Huawei Suomi Finland Research Center, Helsinki</div>
+                        <p class="mt-2">Building production-scale video generation models and co-developing ReWind (CVPR 2025) for long video understanding.</p>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">2021 - 2023</div>
-                        <div class="timeline-title">Postdoctoral Researcher</div>
-                        <div class="timeline-company">INSA Rennes, France</div>
-                        <p class="mt-2">Reconstruction of pen trajectories using deep learning techniques</p>
+                        <div class="timeline-title">R&D Engineer - Robotics & Sensor AI</div>
+                        <div class="timeline-company">IRISA Lab UMR 6074, Rennes, France</div>
+                        <p class="mt-2">Deep learning pipelines for kinematic time series analysis and trajectory reconstruction using TCNs.</p>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">2019 - 2021</div>
-                        <div class="timeline-title">Contractual Associate Professor</div>
-                        <div class="timeline-company">CY Cergy Paris Université</div>
-                        <p class="mt-2">Document analysis and 3D modeling of ancient maps</p>
+                        <div class="timeline-title">Lecturer & Researcher - Deep Learning & 3D AI</div>
+                        <div class="timeline-company">ETIS Lab UMR 8051, Cergy Paris University</div>
+                        <p class="mt-2">UNet-based architectures for visual perception and 3D modeling of ancient maps.</p>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">2018 - 2019</div>
-                        <div class="timeline-title">Postdoctoral Researcher</div>
-                        <div class="timeline-company">University of Rouen Normandy</div>
-                        <p class="mt-2">Information extraction in digitized historical documents</p>
+                        <div class="timeline-title">R&D Engineer - Document AI</div>
+                        <div class="timeline-company">LITIS Lab EA 4108, Rouen, France</div>
+                        <p class="mt-2">Production DNN pipelines for named entity extraction from historical documents (EURHISFIRM project).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Achievements -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-trophy me-2 text-primary"></i>Key Achievements</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0">CVPR 2025 Publication</h5>
+                                        <small class="text-secondary">Tier-1 Conference</small>
+                                    </div>
+                                </div>
+                                <p class="card-text">Co-developed ReWind, a large language model for long video understanding with instructed learnable memory.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="award-icon me-3" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0">Patent Submitted</h5>
+                                        <small class="text-secondary">AI-Journalist</small>
+                                    </div>
+                                </div>
+                                <p class="card-text">Apparatus to Generate Media Contents Conditioned to User Preferences Settings.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -194,8 +274,8 @@
     <footer class="footer">
         <div class="footer-content">
             <div>
-                <h5 class="mb-2">Wassim Swaileh</h5>
-                <p class="mb-0">Data Scientist & AI Researcher</p>
+                <h5 class="mb-2">Wassim Swaileh, PhD</h5>
+                <p class="mb-0">AI Engineer & Multimodal AI Researcher</p>
             </div>
             <div class="text-lg-end">
                 <p>&copy; 2024 Wassim Swaileh. All rights reserved.</p>

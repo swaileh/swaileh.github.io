@@ -1,110 +1,493 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="academic_experience.css"> <!-- External CSS file -->
-    <title>Academic Experience</title>
+    <meta name="description" content="Academic Experience - Wassim Swaileh, PhD - Teaching, Research, and Administrative Roles">
+    <title>Academic Experience - Wassim Swaileh</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section id="academic-experience" class="mt-4">
-        <h2>Academic Experience</h2>
-        <figure class="figure">
-            <img src="https://perso.etis-lab.fr/swaileh/wp-content/uploads/sites/3/2021/06/Audition_ERTIM-INALCO-10-06-2021_Wassim-Swaileh-1.png" alt="Wassim Swaileh">
-        </figure>
-        <blockquote>
-            <p>In France <img style="width: 20px" src="https://perso.etis-lab.fr/swaileh/wp-content/uploads/sites/3/2020/10/unnamed-1.png" alt="France Flag"></p>
-        </blockquote>
-        <ul class="list">
-            <li>
-                <strong>2019–2020</strong> <strong><em>Contracted associate professor</em></strong>, Department of Computer Science, CY Cergy Paris University, Cergy – Pontoise, France.
-                <ul>
-                    <li><strong>Co-supervision of the end of master’s 1 & 2 projects</strong> in Computer Science and Complex Systems Engineering (IISC) [30h]:
-                        <ul>
-                            <li>Research projects – Research master:
-                                <ul>
-                                    <li>Text Generation using artificial neural networks (Text GAN).</li>
-                                    <li>Segmentation of images of old plans by machine learning.</li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code me-2"></i>Wassim Swaileh
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="summary.html"><i class="fas fa-user me-1"></i>Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html"><i class="fas fa-flask me-1"></i>Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html"><i class="fas fa-briefcase me-1"></i>Experience</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="academic-experience.html"><i class="fas fa-graduation-cap me-1"></i>Academic</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book me-1"></i>Publications
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="publications-journals.html"><i class="fas fa-journal-whills me-2"></i>International Journals</a></li>
+                            <li><a class="dropdown-item" href="publications-conferences.html"><i class="fas fa-users me-2"></i>Conference Proceedings</a></li>
+                            <li><a class="dropdown-item" href="publications-national.html"><i class="fas fa-flag me-2"></i>National Journals</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="phd-thesis.html"><i class="fas fa-graduation-cap me-2"></i>PhD Thesis</a></li>
+                            <li><a class="dropdown-item" href="presentations.html"><i class="fas fa-presentation me-2"></i>Presentations</a></li>
+                            <li><a class="dropdown-item" href="submitted-articles.html"><i class="fas fa-paper-plane me-2"></i>Submitted Articles</a></li>
+                            <li><a class="dropdown-item" href="tutorials.html"><i class="fas fa-chalkboard-teacher me-2"></i>Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="awards.html"><i class="fas fa-trophy me-1"></i>Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html"><i class="fas fa-university me-1"></i>Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div style="margin-top: 80px;">
+        <div class="container mt-4">
+            <!-- Page Header -->
+            <div class="scrolling-text mb-4">
+                <h3><i class="fas fa-graduation-cap me-2"></i>Academic Experience</h3>
+            </div>
+
+            <!-- Teaching Summary -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-chalkboard-teacher me-2 text-primary"></i>Teaching Experience</h2>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-clock fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">1,879+</h3>
+                                <p class="text-secondary mb-0">Total Teaching Hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-globe-europe fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">695h</h3>
+                                <p class="text-secondary mb-0">France & China</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-globe-africa fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">1,184h</h3>
+                                <p class="text-secondary mb-0">Yemen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- France & China Teaching -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-university me-2 text-primary"></i>Teaching in France & China (Remote)</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 - 2022</div>
+                        <div class="timeline-title">Adjunct Lecturer</div>
+                        <div class="timeline-company">Université Rennes 2, MIASHS Department, France</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text"><strong>Total: 37 hours</strong></p>
+                                <ul class="custom-list mb-0">
+                                    <li>Computer Methodology (TD - Undergraduate Year 1)</li>
                                 </ul>
-                            </li>
-                            <li>Synthesis projects – Professional Master
-                                <ul>
-                                    <li>AQUAS, Automated Question Answering System.</li>
-                                    <li>COVID-19 People tracking application.</li>
-                                    <li>Predicting success or failure of products or people based on social media.</li>
-                                    <li>Project of detection of popular events on Twitter (Trend detection).</li>
-                                    <li>Fake News Detection Project.</li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <div class="timeline-title">Contractual Associate Professor (ATER)</div>
+                        <div class="timeline-company">CY Cergy Paris Université, Computer Science Department, France</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text"><strong>Total: 639 hours</strong></p>
+                                <p class="fw-bold mb-2">Research/Synthesis Project Supervision (Master's 1&2):</p>
+                                <ul class="custom-list">
+                                    <li>Text Generation using artificial neural networks (Text GAN)</li>
+                                    <li>Image segmentation of ancient maps using machine learning</li>
+                                    <li>Automated question-answering system project</li>
+                                    <li>Product success/failure prediction project</li>
+                                    <li>Popular events detection on Twitter</li>
+                                    <li>Fake news detection project</li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong>Courses developed in the framework of the partnership with Zhejiang University, in China [96h]:</strong>
-                        <ul>
-                            <li>Object Oriented Programming (Java) (CM, TD, and TP).</li>
-                            <li>Programming and Algorithm I (CM, TD, and TP).</li>
-                            <li>Introduction to Informatics (CM, TD, and TP).</li>
-                            <li>Propositional Logic and Predicate Logic (CM and TD).</li>
-                        </ul>
-                    </li>
-                    <li>Main taught courses [206h]:
-                        <ul>
-                            <li>Distributed Systems and Applications (TD) [36h].</li>
-                            <li>Programming and Algorithm I (TD) [24].</li>
-                            <li>Programming and Algorithm II (TD) [73h].</li>
-                            <li>Introduction to Informatics (TD) [27h].</li>
-                            <li>Propositional Logic and Predicate Logic (TD) [22h].</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <strong>2018–2019</strong> <strong><em>Temporary lecturer</em></strong>, Faculty of Sciences, University of Rouen, Saint Étienne du Rouvray, France.
-                <ul>
-                    <li><strong>Main courses taught [15h]:</strong>
-                        <ul>
-                            <li>Medical image processing (TP).</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <strong>2017–2018 <em>Temporary teaching and research assistant (ATER)</em></strong>, IUT – University of Rouen, Elbeuf, France.
-                <ul>
-                    <li><strong>Main courses taught [Total: 192h]:</strong>
-                        <ul>
-                            <li>Telephony over IP (CM + TD), [27h].</li>
-                            <li>Consolidation of programming bases – Java (TD + TP), [32h].</li>
-                            <li>Operating systems (TP), [35h].</li>
-                            <li>Internet technologies (TP) [35h].</li>
-                            <li>Principles and architectures of networks (TP), [12h].</li>
-                            <li>Broadband transmissions (TP), [16h].</li>
-                            <li>Four Mathematics modules with Scilab (TP), [37h]</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <strong>2016–2017 <em>Demi ATER</em></strong>, Faculty of Science, University of Rouen, Saint Étienne du Rouvray, France.
-                <ul>
-                    <li><strong>Main courses taught [Total: 96h]:</strong>
-                        <ul>
-                            <li>Digital processing of information 1 & 2 (tutorial + practical work), [52h].</li>
-                            <li>Training in Information and Communication Technologies (TD), [44h].</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <strong>2015–2016 <em>Temporary lecturer</em></strong>, Faculty of Sciences of Rouen, Saint Étienne du Rouvray, France.
-                <ul>
-                    <li><strong>Main courses taught [Total: 36h]:</strong>
-                        <ul>
-                            <li>Training in Information and Communication Technologies (TD).</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+                                <p class="fw-bold mb-2 mt-3">Courses (Zhejiang University Partnership - in English):</p>
+                                <ul class="custom-list mb-0">
+                                    <li>System Programming (Lectures & TD) - 32h</li>
+                                    <li>Computer Architecture (Lectures & TD) - 48h</li>
+                                    <li>Web Programming (Lectures & TD) - 32h</li>
+                                    <li>Object Oriented Programming - Java - 64h</li>
+                                    <li>Programming and Algorithms I & II - 64h</li>
+                                    <li>Introduction to Computer Science - 64h</li>
+                                    <li>Propositional and Predicate Logic - 32h</li>
+                                    <li>Distributed Systems and Applications (Lab) - 48h</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018 - 2019</div>
+                        <div class="timeline-title">Adjunct Lecturer</div>
+                        <div class="timeline-company">Université de Rouen, Faculty of Sciences, France</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text"><strong>Total: 15 hours</strong></p>
+                                <ul class="custom-list mb-0">
+                                    <li>Medical Image Processing (Lab - Master's)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017 - 2018</div>
+                        <div class="timeline-title">Temporary Teaching and Research Assistant (ATER)</div>
+                        <div class="timeline-company">IUT - Université de Rouen, France</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text"><strong>Total: 192 hours</strong></p>
+                                <ul class="custom-list mb-0">
+                                    <li>IP Telephony (Lectures + TD) - 27h</li>
+                                    <li>Programming Basics Consolidation - Java (TD + Lab) - 32h</li>
+                                    <li>Operating Systems (Lab) - 35h</li>
+                                    <li>Internet Technologies (Lab) - 35h</li>
+                                    <li>Network Principles and Architectures (Lab) - 12h</li>
+                                    <li>Broadband Transmissions (Lab) - 16h</li>
+                                    <li>Mathematics with Scilab (Lab, 4 modules) - 37h</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016 - 2017</div>
+                        <div class="timeline-title">Half-time ATER</div>
+                        <div class="timeline-company">Faculty of Sciences, Université de Rouen, France</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text"><strong>Total: 96 hours</strong></p>
+                                <ul class="custom-list mb-0">
+                                    <li>Digital Information Processing 1 & 2 (TD + Lab) - 52h</li>
+                                    <li>Training in Information and Communication Technologies (TD) - 44h</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2015 - 2016</div>
+                        <div class="timeline-title">Adjunct Lecturer</div>
+                        <div class="timeline-company">Faculty of Sciences of Rouen, France</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text"><strong>Total: 36 hours</strong></p>
+                                <ul class="custom-list mb-0">
+                                    <li>Training in Information and Communication Technologies (TD)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Yemen Teaching -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-globe me-2 text-primary"></i>Teaching in Yemen</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2012 - 2013</div>
+                        <div class="timeline-title">Head of Computer Networks Department</div>
+                        <div class="timeline-company">Higher School of Engineers - Community Faculty of Sanaa, Yemen</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text"><strong>Total: 256 hours</strong></p>
+                                <ul class="custom-list">
+                                    <li>Principles of Internet and Intranet (Lectures + Lab) - 64h</li>
+                                    <li>Network Design and Dimensioning (Lectures + Lab) - 64h</li>
+                                    <li>Introduction to Telecommunications and Wireless Networks - 64h</li>
+                                    <li>Awareness of Social Engineering Techniques - 64h</li>
+                                </ul>
+                                <p class="fw-bold mb-2 mt-3">Administrative Responsibilities:</p>
+                                <ul class="custom-list mb-0">
+                                    <li>Member of the HPE (High Professional Education) program board</li>
+                                    <li>Preparation of timetables and classroom management</li>
+                                    <li>Coordination and supervision of semester exams</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2009 - 2011</div>
+                        <div class="timeline-title">Vice-Dean for Student Affairs</div>
+                        <div class="timeline-company">Faculty of Engineering and Computer Science - Al-Yemenia University, Sanaa</div>
+                        <div class="card mt-3" style="margin-left: 0;">
+                            <div class="card-body">
+                                <p class="card-text"><strong>Total: 512 hours</strong></p>
+                                <ul class="custom-list">
+                                    <li>Digital Image Processing (Lectures + Lab) - 128h</li>
+                                    <li>Operating Systems (Lectures + Lab) - 128h</li>
+                                    <li>Introduction to Artificial Intelligence (Lectures + TD) - 64h</li>
+                                    <li>Computer Architecture - Advanced & Basic (Lectures + TD) - 128h</li>
+                                    <li>Multimedia Programming with Adobe Flash - 64h</li>
+                                </ul>
+                                <p class="fw-bold mb-2 mt-3">Administrative Responsibilities:</p>
+                                <ul class="custom-list mb-0">
+                                    <li>Assessment and validation of exam records</li>
+                                    <li>Preparation of timetables and classroom management</li>
+                                    <li>Coordination and supervision of final semester exams</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Supervision -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-users me-2 text-primary"></i>Student Supervision</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text mb-3">Supervision of doctoral, post-doctoral, and master's students:</p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Title/Degree</th>
+                                        <th>Subject</th>
+                                        <th>Laboratory</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Florent Imbert</td>
+                                        <td><span class="badge">Doctoral</span></td>
+                                        <td>Reconstruction of trajectory of a connected pen</td>
+                                        <td>IRISA</td>
+                                        <td>2021-2022</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jafar Mansori</td>
+                                        <td><span class="badge">Post-doc</span></td>
+                                        <td>Unsupervised text data exploration on social media</td>
+                                        <td>ETIS</td>
+                                        <td>2019-2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Andrianavalona Harinaivo</td>
+                                        <td><span class="badge">Master 2 (Research)</span></td>
+                                        <td>Segmentation of ancient map images by deep learning</td>
+                                        <td>ETIS</td>
+                                        <td>2020-2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alexis Constant</td>
+                                        <td><span class="badge">Master 2 (Research)</span></td>
+                                        <td>Text generation using machine learning methods</td>
+                                        <td>ETIS</td>
+                                        <td>2020-2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Romain Dessaint et al.</td>
+                                        <td><span class="badge">Master 2 (Professional)</span></td>
+                                        <td>Automated question answering system</td>
+                                        <td>CY Cergy</td>
+                                        <td>2020-2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oumaima Moutawadi et al.</td>
+                                        <td><span class="badge">Master 2 (Professional)</span></td>
+                                        <td>Predicting product success or failure</td>
+                                        <td>CY Cergy</td>
+                                        <td>2020-2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Abdelhakim Said et al.</td>
+                                        <td><span class="badge">Master 1 (Professional)</span></td>
+                                        <td>Detecting fake news</td>
+                                        <td>CY Cergy</td>
+                                        <td>2019-2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mathieu Voisin et al.</td>
+                                        <td><span class="badge">Master 1 (Professional)</span></td>
+                                        <td>Detecting popular events on Twitter</td>
+                                        <td>CY Cergy</td>
+                                        <td>2019-2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zhang Xi-Min</td>
+                                        <td><span class="badge">Master (Research)</span></td>
+                                        <td>Generation of adversarial examples</td>
+                                        <td>Zhejiang University</td>
+                                        <td>2019-2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bouhassi Akli</td>
+                                        <td><span class="badge">Master 2 (Research)</span></td>
+                                        <td>Extraction of named entities</td>
+                                        <td>LITIS</td>
+                                        <td>2018-2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Andres Rojas Chamacho</td>
+                                        <td><span class="badge">Engineer</span></td>
+                                        <td>Extraction of named entities</td>
+                                        <td>LITIS</td>
+                                        <td>2018-2019</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Training -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-certificate me-2 text-primary"></i>Additional Training</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">January 2021</div>
+                        <div class="timeline-title">Deep Learning with PyTorch: Zero to GANs</div>
+                        <div class="timeline-company">Jovian (Online Course)</div>
+                        <p class="mt-2">~60 hours of coursework on deep learning using PyTorch</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">March 2020</div>
+                        <div class="timeline-title">Project Writing Workshop for Horizon 2020 and Horizon Europe</div>
+                        <div class="timeline-company">CY Cergy Paris Université, France</div>
+                        <p class="mt-2">One-and-a-half-day workshop on European funding programs, proposal writing, and partnership building</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">October 2017</div>
+                        <div class="timeline-title">Autumn School – Deep Learning</div>
+                        <div class="timeline-company">Université de Reims Champagne-Ardenne, France</div>
+                        <p class="mt-2">Two-day training on deep learning using NVIDIA DGX-1 environment</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">September 2014</div>
+                        <div class="timeline-title">ERMITES Summer School 2014</div>
+                        <div class="timeline-company">Université de Toulon, France</div>
+                        <p class="mt-2">Four days of training on advanced multimodal information retrieval</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">March 2014</div>
+                        <div class="timeline-title">Professional Certificate "Basic SATCOM"</div>
+                        <div class="timeline-company">Global VSAT Forum, Yemen</div>
+                        <p class="mt-2">Certificate in installing and configuring Point-to-Point (P2P) computer networks via satellite (VSAT)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Academic Activities -->
+            <section class="animate-fadeInUp">
+                <h2><i class="fas fa-tasks me-2 text-primary"></i>Other Academic Activities</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-presentation me-2 text-primary"></i>Seminars</h5>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>2021: LIS Laboratory - QARMA team</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>2021: IRISA UMR-6074, INTUIDOC team</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>2020: GREYC Laboratory UMR 6072, CoDaG team</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>2020: ETIS UMR CNRS 8051, MIDI team</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>2017: TALADOC Study Day on Document Analysis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-glasses me-2 text-primary"></i>Paper Review</h5>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>DAS 2022 (IAPR Workshop)</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>MDPI - Applied Sciences</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>MDPI - Journal of Imaging</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>MDPI - Sensors</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Springer - AIHC Journal</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>IJDAR (Intl. Journal on Document Analysis)</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>ICFHR 2016</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="animate-fadeInUp text-center py-5 my-5" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(245, 158, 11, 0.05)); border-radius: var(--radius-xl);">
+                <h2 class="mb-3">View Research Experience</h2>
+                <p class="lead text-secondary mb-4">Explore my research positions and contributions</p>
+                <a href="experience.html" class="btn btn-primary me-2">
+                    <i class="fas fa-briefcase me-2"></i>Research Experience
+                </a>
+                <a href="publications-conferences.html" class="btn btn-outline">
+                    <i class="fas fa-book me-2"></i>Publications
+                </a>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h5 class="mb-2">Wassim Swaileh, PhD</h5>
+                <p class="mb-0">AI Engineer & Multimodal AI Researcher</p>
+            </div>
+            <div class="text-lg-end">
+                <p>&copy; 2026 Wassim Swaileh. All rights reserved.</p>
+                <p class="mb-0">
+                    <a href="contact.html">Contact</a> | 
+                    <a href="https://github.com/swaileh" target="_blank">GitHub</a> | 
+                    <a href="https://www.linkedin.com/in/wassim-swaileh-3198bb65/" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
 </body>
 </html>
